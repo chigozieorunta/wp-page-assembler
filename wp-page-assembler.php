@@ -1,14 +1,16 @@
 <?php
-
 /*
- * Plugin Name: WP Page Assembler
- * Plugin URI: https://github.com/chigozieorunta/wp-page-assembler
- * Description: The Page Assember WordPress Plugin is a collection of 
- * WordPress widgets designed to help web designers build sections of 
- * their web pages easily via drag and drop.
- * Version: 1.0
- * Author: Chigozie Orunta
- * Author URI: https://github.com/chigozieorunta
+ * Filename:      wp-page-assembler.php
+ * Plugin Name:   wp-page-assembler
+ * Plugin URI:    https://github.com/chigozieorunta/wp-page-assembler
+ * Description:   The Page Assember WordPress Plugin is a collection of WordPress widgets designed to help web designers build sections of their web pages easily
+ * Domain Path:   ./
+ * Description:   The parent class - wpPageAssembler
+ * Author:        Chigozie Orunta
+ * Version:       1.0.0
+ * Licence:       MIT
+ * Author URI:    https://github.com/chigozieorunta
+ * Last Change:   2019/02/01
 */
 
 //Custom Functions
