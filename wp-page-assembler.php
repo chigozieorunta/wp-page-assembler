@@ -57,10 +57,10 @@ class wpPageAssembler {
     /**
 	 * Register Menu Method
 	 *
-     * @access private  
+     * @access public 
 	 * @since  1.0.0
 	 */
-    private static function registerMenu() {
+    public static function registerMenu() {
         add_menu_page(
             'wp-page-assembler', 
             'wp-page-assembler', 
@@ -73,10 +73,10 @@ class wpPageAssembler {
     /**
 	 * Register HTML Method
 	 *
-     * @access private
+     * @access public
 	 * @since  1.0.0
 	 */
-    private static function registerHTML() {
+    public static function registerHTML() {
         require_once('wp-page-assembler-html.php');
     }
 
