@@ -26,7 +26,7 @@ class pa_slider extends WP_Widget {
 		parent::__construct(
 			'pa_slider',
 			__('Page Assembler Slider', 'widget_name'),
-			array('description' => __( 'A Customized Widget for displaying revolution slider'), )
+			array('description' => __( 'Display Revolution Slider...'), )
 		);
 	}
     
