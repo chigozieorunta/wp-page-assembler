@@ -16,13 +16,6 @@
 //Custom Functions
 require_once('wp-page-assembler-functions.php');
 
-//Add Widgets...
-/*require_once('widgets/widget-icon-set.php');
-require_once('widgets/widget-blog-set.php');
-require_once('widgets/widget-slider.php');
-require_once('widgets/widget-banner.php');
-require_once('widgets/widget-contact-form.php');*/
-
 //Define Plugin Path
 define("WPPAGEASSEMBLER", plugin_dir_url( __FILE__ ));
 
