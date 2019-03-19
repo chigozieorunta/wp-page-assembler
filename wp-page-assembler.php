@@ -17,11 +17,11 @@
 require_once('wp-page-assembler-functions.php');
 
 //Add Widgets...
-require_once('widgets/widget-icon-set.php');
+/*require_once('widgets/widget-icon-set.php');
 require_once('widgets/widget-blog-set.php');
 require_once('widgets/widget-slider.php');
 require_once('widgets/widget-banner.php');
-require_once('widgets/widget-contact-form.php');
+require_once('widgets/widget-contact-form.php');*/
 
 //Define Plugin Path
 define("WPPAGEASSEMBLER", plugin_dir_url( __FILE__ ));
@@ -56,7 +56,7 @@ class wpPageAssembler {
 	 * @return  void
 	 */
 	private static function registerClasses() {
-		foreach (glob( __DIR__ . '/inc/*.php') as $path) {
+		foreach (glob( __DIR__ . '/widgets/*.php') as $path) {
 			require_once $path;
 		}
 	}
