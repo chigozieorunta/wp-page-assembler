@@ -13,11 +13,11 @@
  * Last Change:   2019/02/01
 */
 
-//Custom Functions
-require_once('wp-page-assembler-functions.php');
-
 //Define Plugin Path
 define("WPPAGEASSEMBLER", plugin_dir_url( __FILE__ ));
+
+//Custom Functions
+require_once('inc/wp-form-control.php');
 
 wpPageAssembler::getInstance();
 
