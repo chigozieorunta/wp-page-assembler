@@ -22,7 +22,10 @@ class wpFormControl {
 	 *
 	 * @since  1.0.0
 	*/
-    public function __construct() {}
+    public function __construct($object, $wpInstance) {
+        $this->widgetObject = $object;
+        $this->wpInstance = $wpInstance;
+    }
 
     /**
 	 * Get Control Method
@@ -31,14 +34,13 @@ class wpFormControl {
 	 * @since  1.0.0
 	*/
     public function getControl($key, $value) {
-        switch($key) {
+        $label = $this->getLabel($key);
+        switch($value) {
             case 'text':
-                $label = $this->getLabel($value);
-                require_once('forms/getTextInput.php');
+                require('wp-form-input-text.php');
                 break;
             case 'select':
-                $label = $this->getLabel($value);
-                require_once('forms/getSelectInput.php');
+                //require('wp-form-input-text.php');
                 break;
             default:
                 break;
@@ -52,7 +54,18 @@ class wpFormControl {
 	 * @since  1.0.0
 	*/
     private function getLabel($name) {
-        return $label;
+        /*$name = explode(' ', $name);
+        $label = [];
+        foreach($name as $nameCharacter) {
+            if(strtoupper($nameCharacter) === $nameCharacter) {
+                array_push($label, ' ');
+            }
+            array_push($label, $nameCharacter);
+        }
+        $label = implode(' ', $label);
+        $label = ucwords($label);
+        return $label;*/
+        return $name;
     }
 }
 
