@@ -38,7 +38,7 @@ class pa_slider extends WP_Widget {
     */
 	public function widget($args, $instance) {
         extract($args);
-        require_once('templates/template-slider.php');
+        //require('templates/template-slider.php');
     }
 
 	/**
@@ -65,18 +65,20 @@ class pa_slider extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         $controls = array(
-            'text' => 'title',
-            'text' => 'footnote',
-            'text' => 'revolutionSlider',
-            'text' => 'captionColor',
-            'text' => 'textColor',
-            'text' => 'backgroundColor',
-            'text' => 'backgroundImage',
-            'text' => 'backgroundOveraly'
+            "title" => "text",
+            "footnote" => "text",
+            "revolutionSlider" => "text",
+            "captionColor" => "text",
+            "textColor" => "text",
+            "backgroundColor" => "text",
+            "backgroundImage" => "text",
+            "backgroundOverlay" => "text"
         );
-        $formControl = new wpFormControl();
-        foreach($controls as $key=>$value) {
-            $formControl->getControl($key, $value);
+        echo 'ok';
+        //$formControl = new wpFormControl($this, $instance);
+        foreach($controls as $control) {
+            echo 'ok';
+            //$formControl->getControl($key, $value);
         }
 	}
 }
