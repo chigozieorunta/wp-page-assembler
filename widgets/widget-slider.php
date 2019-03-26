@@ -77,7 +77,7 @@ class pa_slider extends WP_Widget {
         ?>
         <p>
             <label for="<?php echo $this->get_field_id($value); ?>"><?php _e($label) ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id($value); ?>" name="<?php echo $this->get_field_name($value); ?>" value="<?php echo instance[$value]; ?>" />
+            <input type="text" class="widefat" id="<?php echo $this->get_field_id($value); ?>" name="<?php echo $this->get_field_name($value); ?>" value="<?php echo $instance[$value]; ?>" />
         </p>
         <?php
         /* $formControl = new wpFormControl($this, $instance);
