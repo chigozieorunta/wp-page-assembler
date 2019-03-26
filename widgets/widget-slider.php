@@ -22,11 +22,11 @@ class pa_slider extends WP_Widget {
      * @access public  
 	 * @since  1.0.0
     */
-	public function __construct() {
+	function __construct() {
 		parent::__construct(
 			'pa_slider',
 			__('Page Assembler Slider', 'widget_name'),
-			array('description' => __( 'Display Revolution Slider...'), )
+			array('description' => __('Display Revolution Slider...'))
 		);
 	}
     
@@ -36,9 +36,9 @@ class pa_slider extends WP_Widget {
      * @access public  
 	 * @since  1.0.0
     */
-	public function widget($args, $instance) {
+	function widget($args, $instance) {
         extract($args);
-        //require('templates/template-slider.php');
+        $title = apply_filter('widget_title', $instance['title']);
     }
 
 	/**
@@ -47,7 +47,7 @@ class pa_slider extends WP_Widget {
      * @access public  
 	 * @since  1.0.0
     */
-	public function update($new_instance, $old_instance) {
+	function update($new_instance, $old_instance) {
         $instance = $old_instance;
         foreach($new_instance as $column=>$key) {
             $instance[$column] = strip_tags($key);
@@ -61,7 +61,7 @@ class pa_slider extends WP_Widget {
      * @access public  
 	 * @since  1.0.0
     */
-	public function form($instance) {
+	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         $controls = array(
@@ -73,13 +73,17 @@ class pa_slider extends WP_Widget {
             "backgroundColor" => "text",
             "backgroundImage" => "text",
             "backgroundOverlay" => "text"
-        );
-        echo 'ok';
-        //$formControl = new wpFormControl($this, $instance);
-        foreach($controls as $control) {
-            echo 'ok';
-            //$formControl->getControl($key, $value);
-        }
+        ); $value = 'title';
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id($value); ?>"><?php _e($label) ?></label>
+            <input type="text" class="widefat" id="<?php echo $this->get_field_id($value); ?>" name="<?php echo $this->get_field_name($value); ?>" value="<?php echo instance[$value]; ?>" />
+        </p>
+        <?php
+        /* $formControl = new wpFormControl($this, $instance);
+        foreach($controls as $key=>$value) {
+            $formControl->getControl($key, $value);
+        } */
 	}
 }
 
