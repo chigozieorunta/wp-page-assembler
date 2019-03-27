@@ -32,6 +32,7 @@ class wpPageAssembler {
 	 */
     public function __construct() {
         add_action('admin_menu', array(get_called_class(), 'registerMenu'));
+        //add_action('wp_enqueue_scripts', array(get_called_class(), 'registerScripts'));
         self::registerClasses();
     }
 
@@ -61,6 +62,19 @@ class wpPageAssembler {
             'wp-page-assembler', 
             array(get_called_class(), 'registerHTML')
         );
+    }
+
+    /**
+	 * Register Scripts Method
+	 *
+     * @access public 
+	 * @since  1.0.0
+	 */
+    public static function registerScripts() {
+        if(!wp_style_is('bootstrap.min.css', $list = 'enqueued')) {
+            wp_register_style('bootstrap', plugin_dir_url(__FILE__).'css/bootstrap.min.css');
+            wp_enqueue_style('bootstrap');
+        }
     }
 
     /**
