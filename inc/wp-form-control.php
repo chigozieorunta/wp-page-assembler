@@ -54,18 +54,16 @@ class wpFormControl {
 	 * @since  1.0.0
 	*/
     private function getLabel($name) {
-        /*$name = explode(' ', $name);
-        $label = [];
+        $name = str_split($name); $label = [];
         foreach($name as $nameCharacter) {
-            if(strtoupper($nameCharacter) === $nameCharacter) {
+            if(ctype_upper($nameCharacter)) {
                 array_push($label, ' ');
             }
             array_push($label, $nameCharacter);
         }
-        $label = implode(' ', $label);
+        $label = join('', $label);
         $label = ucwords($label);
-        return $label;*/
-        return $name;
+        return $label;
     }
 }
 
