@@ -14,7 +14,7 @@
 */
 
 //Define Plugin Path
-define("WPPAGEASSEMBLER", plugin_dir_url( __FILE__ ));
+define("WPPAGEASSEMBLER", plugin_dir_path(__FILE__));
 
 //Custom Functions
 require_once('inc/wp-form-control.php');
@@ -25,13 +25,6 @@ wpPageAssembler::getInstance();
  * Class wpPageAssembler
  */
 class wpPageAssembler {
-    /**
-	 * Private static variables
-	 *
-	 * @var string
-	 */
-    private static $pluginName;
-
     /**
 	 * Constructor
 	 *
@@ -49,7 +42,7 @@ class wpPageAssembler {
 	 * @return  void
 	 */
 	private static function registerClasses() {
-		foreach (glob( __DIR__ . '/widgets/*.php') as $path) {
+		foreach(glob(__DIR__.'/widgets/*.php') as $path) {
 			require_once $path;
 		}
 	}
