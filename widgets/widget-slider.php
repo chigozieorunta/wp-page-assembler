@@ -38,7 +38,7 @@ class pa_slider extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        $title = apply_filter('widget_title', $instance['title']);
+        require_once(WPPAGEASSEMBLER.'templates/template-slider.php');
     }
 
 	/**
@@ -49,8 +49,8 @@ class pa_slider extends WP_Widget {
     */
 	function update($new_instance, $old_instance) {
         $instance = $old_instance;
-        foreach($new_instance as $column=>$key) {
-            $instance[$column] = strip_tags($key);
+        foreach($new_instance as $key=>$value) {
+            $instance[$key] = strip_tags($value);
         }
         return $instance;
     }
@@ -73,17 +73,11 @@ class pa_slider extends WP_Widget {
             "backgroundColor" => "text",
             "backgroundImage" => "text",
             "backgroundOverlay" => "text"
-        ); $value = 'title';
-        ?>
-        <p>
-            <label for="<?php echo $this->get_field_id($value); ?>"><?php _e($label) ?></label>
-            <input type="text" class="widefat" id="<?php echo $this->get_field_id($value); ?>" name="<?php echo $this->get_field_name($value); ?>" value="<?php echo $instance[$value]; ?>" />
-        </p>
-        <?php
-        /* $formControl = new wpFormControl($this, $instance);
+        );
+        $formControl = new wpFormControl($this, $instance);
         foreach($controls as $key=>$value) {
             $formControl->getControl($key, $value);
-        } */
+        }
 	}
 }
 
