@@ -75,6 +75,10 @@ class wpPageAssembler {
             wp_register_style('bootstrap', plugin_dir_url(__FILE__).'css/bootstrap.min.css');
             wp_enqueue_style('bootstrap');
         }
+        if(!wp_style_is('pa.css', $list = 'enqueued')) {
+            wp_register_style('pa', plugin_dir_url(__FILE__).'css/pa.css');
+            wp_enqueue_style('pa');
+        }
     }
 
     /**
