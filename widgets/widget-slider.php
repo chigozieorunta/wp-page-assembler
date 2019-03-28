@@ -70,7 +70,7 @@ class pa_slider extends WP_Widget {
             'right'     => 'right',
             'justify'   => 'justify'
         );
-        $controls = array(
+        $sliderControls = array(
             "title"             => "text",
             "footnote"          => "text",
             "revolutionSlider"  => "text",
@@ -81,9 +81,9 @@ class pa_slider extends WP_Widget {
             "backgroundOverlay" => "text",
             "textAlign"         => $textAlign
         );
-        $formControl = new wpFormControl($this, $instance);
-        foreach($controls as $key=>$value) {
-            $formControl->getControl($key, $value);
+        $sliderControl = new wpFormControl($this, $instance);
+        foreach($sliderControls as $key=>$value) {
+            $sliderControl->getControl($key, $value);
         }
 	}
 }
