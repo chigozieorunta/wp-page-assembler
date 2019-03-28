@@ -64,15 +64,22 @@ class pa_slider extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
+        $textAlign = array(
+            'left'      => 0,
+            'center'    => 1,
+            'right'     => 2,
+            'justify'   => 3
+        );
         $controls = array(
-            "title" => "text",
-            "footnote" => "text",
-            "revolutionSlider" => "text",
-            "captionColor" => "text",
-            "textColor" => "text",
-            "backgroundColor" => "text",
-            "backgroundImage" => "text",
-            "backgroundOverlay" => "text"
+            "title"             => "text",
+            "footnote"          => "text",
+            "revolutionSlider"  => "text",
+            "captionColor"      => "text",
+            "textColor"         => "text",
+            "backgroundColor"   => "text",
+            "backgroundImage"   => "text",
+            "backgroundOverlay" => "text",
+            "textAlign"         => $textAlign
         );
         $formControl = new wpFormControl($this, $instance);
         foreach($controls as $key=>$value) {
