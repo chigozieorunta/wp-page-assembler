@@ -65,10 +65,10 @@ class pa_slider extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         $textAlign = array(
-            'left'      => 0,
-            'center'    => 1,
-            'right'     => 2,
-            'justify'   => 3
+            'left'      => 'left',
+            'center'    => 'center',
+            'right'     => 'right',
+            'justify'   => 'justify'
         );
         $controls = array(
             "title"             => "text",
