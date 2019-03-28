@@ -35,12 +35,13 @@ class wpFormControl {
 	*/
     public function getControl($key, $value) {
         $label = $this->getLabel($key);
-        switch($value) {
-            case 'text':
+        $vartype = gettype($value);
+        switch($vartype) {
+            case 'string':
                 require('wp-form-input-text.php');
                 break;
-            case 'select':
-                //require('wp-form-input-text.php');
+            case 'array':
+                require('wp-form-input-select.php');
                 break;
             default:
                 break;
