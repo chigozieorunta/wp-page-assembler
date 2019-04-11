@@ -24,7 +24,7 @@ class pa_icon_group extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_slider',
+			'pa_icon_group',
 			__('Page Assembler Icon Group', 'widget_name'),
 			array('description' => __('Display Icon Group...'))
 		);
@@ -38,6 +38,14 @@ class pa_icon_group extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
+        $posts = get_posts(
+            array(
+                'category_name' => sanitize_title($instance['category']),
+                'orderby'       => $instance['sortType'],
+                'order'         => $instance['sortOrder'],
+                'numberposts'   => -1
+            )
+        );
         require_once(WPPAGEASSEMBLER.'templates/template-icon-group.php');
     }
 
@@ -64,22 +72,19 @@ class pa_icon_group extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        $textAlign = array(
-            'left'      => 'left',
-            'center'    => 'center',
-            'right'     => 'right',
-            'justify'   => 'justify'
-        );
+        global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders;
         $sliderControls = array(
             "title"             => "text",
             "footnote"          => "text",
-            "revolutionSlider"  => "text",
+            "category"          => $wpCategories,
+            "iconPosition"      => $iconPositions,
+            "sortType"          => $wpSortTypes,
+            "sortOrder"         => $wpSortOrders,
             "captionColor"      => "text",
             "textColor"         => "text",
             "backgroundColor"   => "text",
             "backgroundImage"   => "text",
-            "backgroundOverlay" => "text",
-            "textAlign"         => $textAlign
+            "backgroundOverlay" => "text"
         );
         $sliderControl = new wpFormControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
