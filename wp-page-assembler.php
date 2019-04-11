@@ -18,6 +18,7 @@ define("WPPAGEASSEMBLER", plugin_dir_path(__FILE__));
 
 //Custom Functions
 require_once('inc/wp-form-control.php');
+require_once('inc/globals.php');
 
 wpPageAssembler::getInstance();
 
