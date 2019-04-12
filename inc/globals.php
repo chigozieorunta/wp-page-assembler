@@ -1,6 +1,6 @@
 <?php
 
-global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders, $textAlign;
+global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
 
 $wpCategories = [];
 $categories = get_categories();
@@ -29,6 +29,13 @@ $textAlign = array(
     'center'    => 'center',
     'right'     => 'right',
     'justify'   => 'justify'
+);
+
+$columns = array(
+    '1'     => 1,
+    '2'     => 2,
+    '3'     => 3,
+    '4'     => 4
 );
 
 ?>
