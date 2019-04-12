@@ -38,14 +38,20 @@ class pa_icon_group extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
+        $instance['limit'] = ($instance['limit']? $instance['limit'] : -1);
+        $columnClass = getColumnClass($instance['numberOfColumns']);
         $posts = get_posts(
             array(
                 'category_name' => sanitize_title($instance['category']),
                 'orderby'       => $instance['sortType'],
                 'order'         => $instance['sortOrder'],
-                'numberposts'   => -1
+                'numberposts'   => $instance['limit']
             )
         );
+        global $post; 
+        $currentPointer = 0; $currentRow = 1; 
+        $numberOfColumns = $instance['numberOfColumns'];
+        $numberOfRows = ceil(count($posts)/$numberOfColumns);
         require_once(WPPAGEASSEMBLER.'templates/template-icon-group.php');
     }
 
@@ -72,12 +78,14 @@ class pa_icon_group extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders;
+        global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
         $sliderControls = array(
             "title"             => "text",
             "footnote"          => "text",
-            "category"          => $wpCategories,
+            "category"          => $wpCategories,            
+            "numberOfColumns"   => $columns,
             "iconPosition"      => $iconPositions,
+            "limit"             => "text",
             "sortType"          => $wpSortTypes,
             "sortOrder"         => $wpSortOrders,
             "captionColor"      => "text",
