@@ -17,6 +17,7 @@
 define("WPPAGEASSEMBLER", plugin_dir_path(__FILE__));
 
 //Custom Functions
+require_once('inc/wp-page-assembler-functions.php');
 require_once('inc/wp-form-control.php');
 require_once('inc/globals.php');
 
@@ -75,6 +76,10 @@ class wpPageAssembler {
         if(!wp_style_is('bootstrap.min.css', $list = 'enqueued')) {
             wp_register_style('bootstrap', plugin_dir_url(__FILE__).'css/bootstrap.min.css');
             wp_enqueue_style('bootstrap');
+        }
+        if(!wp_style_is('bootstrap-spacer.min.css', $list = 'enqueued')) {
+            wp_register_style('bootstrap-spacer', plugin_dir_url(__FILE__).'css/bootstrap-spacer.min.css');
+            wp_enqueue_style('bootstrap-spacer');
         }
         if(!wp_style_is('pa.css', $list = 'enqueued')) {
             wp_register_style('pa', plugin_dir_url(__FILE__).'css/pa.css');
