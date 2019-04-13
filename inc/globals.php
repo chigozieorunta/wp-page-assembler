@@ -1,12 +1,19 @@
 <?php
 
-global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
+global $wpCategories, $wpPages, $iconPositions, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
 
 $wpCategories = [];
 $categories = get_categories();
 foreach($categories as $categoryItem) {
     $categoryName = $categoryItem->cat_name;
     $wpCategories[$categoryName] = $categoryName;
+}
+
+$wpPages = [];
+$pages = get_pages();
+foreach($pages as $page) {
+    $key = get_page_link($page->ID);
+    $wpPages[$key] = $page->post_title;
 }
 
 $iconPositions = array(
