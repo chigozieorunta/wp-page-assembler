@@ -78,7 +78,7 @@ class pa_icon_group extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpCategories, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
+        global $wpCategories, $wpPages, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
         $sliderControls = array(
             "title"             => "text",
             "footnote"          => "text",
@@ -92,7 +92,9 @@ class pa_icon_group extends WP_Widget {
             "textColor"         => "text",
             "backgroundColor"   => "text",
             "backgroundImage"   => "text",
-            "backgroundOverlay" => "text"
+            "backgroundOverlay" => "text",
+            "pageToGo"          => $wpPages,
+            "pageButtonText"    => "text"
         );
         $sliderControl = new wpFormControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
