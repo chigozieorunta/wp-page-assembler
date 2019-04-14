@@ -10,7 +10,7 @@
                 */
                 ?>
 
-                <?php require_once('template-section-header.php'); ?>
+                <?php require_once('template-section-header.phpi'); ?>
 
                 <?php
                 /**
