@@ -21,6 +21,14 @@ html, body {
 	background-size: cover; 
 }
 
+.pa-overlay {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	opacity: 0.5;
+}
+
 .pa-caption {
 	margin-top: 0;
 	margin-bottom: 15px;
