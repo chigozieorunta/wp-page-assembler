@@ -12,8 +12,9 @@ foreach($categories as $categoryItem) {
 $wpPages = [];
 $pages = get_pages();
 foreach($pages as $page) {
-    $key = get_page_link($page->ID);
-    $wpPages[$key] = $page->post_title;
+    $key = $page->ID;
+    $value = $page->post_title;
+    $wpPages[$value] = $key;
 }
 
 $iconPositions = array(
