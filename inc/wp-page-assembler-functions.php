@@ -1,10 +1,5 @@
 <?php
 
-function fn_theme_substring($string, $length) {
-	$theme_text = substr($string, 0, $length); 
-	return $theme_text.'...';
-}
-
 function fn_theme_date($date) {
 	$date = new DateTime($date);
 	$theme_date = $date->format('M, j Y');
@@ -41,6 +36,12 @@ function fn_get_alternate($alternate) {
 			break;
 	}
 	return $alternate;
+}
+
+function getShortenedText($string, $length) {
+	$theme_text = substr($string, 0, $length);
+	$theme_text = (strlen($string) > $length) ? $theme_text.'...' : $theme_text;
+	return $theme_text;
 }
 
 function getColumnClass($columns){
