@@ -25,7 +25,7 @@ class pa_icon_group extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'pa_icon_group',
-			__('Page Assembler Icon Group', 'widget_name'),
+			__('PA Icon Group', 'widget_name'),
 			array('description' => __('Display Icon Group...'))
 		);
 	}
@@ -38,21 +38,21 @@ class pa_icon_group extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        $instance['limit'] = ($instance['limit']? $instance['limit'] : -1);
+        $instance['numberOfPosts'] = ($instance['numberOfPosts']? $instance['numberOfPosts'] : -1);
         $columnClass = getColumnClass($instance['numberOfColumns']);
         $posts = get_posts(
             array(
                 'category_name' => sanitize_title($instance['category']),
                 'orderby'       => $instance['sortType'],
                 'order'         => $instance['sortOrder'],
-                'numberposts'   => $instance['limit']
+                'numberposts'   => $instance['numberOfPosts']
             )
         );
         global $post; 
         $currentPointer = 0; $currentRow = 1; 
         $numberOfColumns = $instance['numberOfColumns'];
         $numberOfRows = ceil(count($posts)/$numberOfColumns);
-        require_once(WPPAGEASSEMBLER.'templates/template-icon-group.php');
+        require(WPPAGEASSEMBLER.'templates/template-icon-group.php');
     }
 
 	/**
@@ -80,21 +80,23 @@ class pa_icon_group extends WP_Widget {
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpCategories, $wpPages, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
         $sliderControls = array(
-            "title"             => "text",
-            "footnote"          => "text",
-            "category"          => $wpCategories,            
-            "numberOfColumns"   => $columns,
-            "iconPosition"      => $iconPositions,
-            "limit"             => "text",
-            "sortType"          => $wpSortTypes,
-            "sortOrder"         => $wpSortOrders,
-            "captionColor"      => "text",
-            "textColor"         => "text",
-            "backgroundColor"   => "text",
-            "backgroundImage"   => "text",
-            "backgroundOverlay" => "text",
-            "pageToGo"          => $wpPages,
-            "pageButtonText"    => "text"
+            "title"                     => "text",
+            "footnote"                  => "text",
+            "category"                  => $wpCategories,            
+            "numberOfColumns"           => $columns,
+            "iconPosition"              => $iconPositions,
+            "numberOfPosts"             => "text",
+            "lengthOfPostText"          => "text",
+            "sortType"                  => $wpSortTypes,
+            "sortOrder"                 => $wpSortOrders,
+            "captionColor"              => "text",
+            "textColor"                 => "text",
+            "backgroundColor"           => "text",
+            "backgroundImage"           => "text",
+            "backgroundOverlay"         => "text",
+            "callToActionButtonPage"    => $wpPages,
+            "callToActionButtonText"    => "text",
+            "callToActionButtonClass"   => "text"
         );
         $sliderControl = new wpFormControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
