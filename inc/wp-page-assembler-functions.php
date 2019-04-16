@@ -38,6 +38,12 @@ function fn_get_alternate($alternate) {
 	return $alternate;
 }
 
+function getImage($post) {
+	$image = wp_get_attachment_image_src(get_post_thumbanil_id($post->ID), 'full');
+	$image = $image[0];
+	return $image;
+}
+
 function getShortenedText($string, $length) {
 	$theme_text = substr($string, 0, $length);
 	$theme_text = (strlen($string) > $length) ? $theme_text.'...' : $theme_text;
