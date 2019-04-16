@@ -5,7 +5,7 @@
  * Plugin URI:    https://github.com/chigozieorunta/wp-page-assembler
  * Description:   The Page Assember WordPress Plugin is a collection of WordPress widgets designed to help web designers build sections of their web pages easily
  * Domain Path:   ./widgets
- * Description:   The pa_slider class
+ * Description:   The pa_icon_group class
  * Author:        Chigozie Orunta
  * Version:       1.0.0
  * Licence:       MIT
