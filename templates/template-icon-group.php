@@ -18,7 +18,7 @@
                 <?php if($instance['iconPosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
                         <?php if($icon): ?>
-                            <i class="<?php echo $icon; ?>" style="margin-bottom: 15px;"></i>
+                            <i class="<?= $icon; ?>" style="margin-bottom: 15px;"></i>
                         <?php endif; ?>
                         <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                         <div style="margin-top: -7.5px;">
@@ -34,7 +34,7 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row">
                             <div class="col-xs-2 text-right">
-                                <?php if($icon): ?><i class="<?php echo $icon; ?>"></i><?php endif; ?>
+                                <?php if($icon): ?><i class="<?= $icon; ?>"></i><?php endif; ?>
                             </div>
                             <div class="col-xs-10">
                                 <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
