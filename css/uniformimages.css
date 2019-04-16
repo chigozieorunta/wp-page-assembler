@@ -1,0 +1,153 @@
+/**
+ * uniformimages - v1.0.3 - 2018-04-25
+ * https://github.com/chigozieorunta/uniformimages
+ *
+ * Copyright (c) 2018 Chigozie Orunta
+ * Licensed MIT <https://github.com/chigozieorunta/uniformimages/blob/master/LICENSE>
+**/
+
+.unim, .unim-square, .unim-circle, .unim-portrait, .unim-landscape {
+    overflow: hidden;
+    padding-top: 66.66%;
+    text-align: center;
+    position: relative;
+    height: 0;
+}
+
+.unim-height {
+    padding-top: 0;
+}
+
+.unim-placeholder {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #DDEEFF;
+}
+
+.unim-placeholder > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.unim-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center top;
+    background-position: repeat;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.unim-icon {
+    height: 50px; width: 50px;
+    border: 4px solid #444;
+    margin: 0 auto;
+    opacity: 0.1;
+    position: relative;
+}
+
+.unim-icon::before {
+    width: 0; height: 0; 
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+    border-bottom: 27.5px solid #444;
+    position: absolute; top: 9.5px; left: 5px;
+    content: " ";
+}
+
+.unim-icon::after {
+    width: 0; height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #444;
+    position: absolute; top: 17px; right: 5px;
+    content: " ";
+}
+
+.unim-square {
+    padding-top: 100%;
+    height: 0 !important;
+}
+
+.unim-circle {
+    border-radius: 100%;
+    padding-top: 100%;
+    height: 0 !important;
+}
+
+.unim-portrait {
+    padding-top: 133.33%;
+    height: 0 !important;
+}
+
+.unim-landscape {
+    padding-top: 66.66%;
+    height: 0 !important;
+}
+
+.unim-diamond {
+    padding-top: 100%;
+    text-align: center;
+    position: relative;
+    height: 0px;
+}
+
+.unim-diamond-container {
+    border-radius: 20px;
+    transform: rotate(45deg);
+    height: 70.71%;
+    width: 70.71%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    overflow: hidden;
+}
+
+.unim-diamond-placeholder {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: 0;
+    bottom: 0;
+    width: 145%;
+    height: 145%;
+    transform: rotate(-45deg) !important;
+    background: #DDEEFF;
+}
+
+.unim-diamond-placeholder > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.unim-diamond-placeholder > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.unim-diamond-img {
+    background-position: center;
+    background-position: repeat;
+    background-size: cover;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: 0;
+    bottom: 0;
+    width: 145%;
+    height: 145%;
+    transform: rotate(-45deg);
+}
