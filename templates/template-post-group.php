@@ -17,8 +17,8 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
-                        <img src="<?= $image; ?>" class="unim" style="margin-bottom: 15px;"/>
-                        <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
+                        <img src="<?= $image; ?>" class="unim"/>
+                        <h4 class="pa-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                         <div style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
                                 <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
@@ -32,9 +32,9 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row row-col-spacer">
                             <div class="col-sm-6">
-                                <img src="<?= $image; ?>" class="unim"/>
+                                <img src="<?= $image; ?>" class="unim-square"/>
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-sm-6">
                                 <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                                 <?php if($instance['lengthOfPostText']): ?>
                                     <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
