@@ -77,9 +77,17 @@ class wpPageAssembler {
             wp_register_style('bootstrap', plugin_dir_url(__FILE__).'css/bootstrap.min.css');
             wp_enqueue_style('bootstrap');
         }
-        if(!wp_style_is('bootstrap-spacer.min.css', $list = 'enqueued')) {
-            wp_register_style('bootstrap-spacer', plugin_dir_url(__FILE__).'css/bootstrap-spacer.min.css');
+        if(!wp_style_is('bootstrap-spacer.css', $list = 'enqueued')) {
+            wp_register_style('bootstrap-spacer', plugin_dir_url(__FILE__).'css/bootstrap-spacer.css');
             wp_enqueue_style('bootstrap-spacer');
+        }
+        if(!wp_style_is('uniformimages.css', $list = 'enqueued')) {
+            wp_register_style('uniformimages', plugin_dir_url(__FILE__).'css/uniformimages.css');
+            wp_enqueue_style('uniformimages');
+        }
+        if(!wp_script_is('uniformimages.js', $list = 'enqueued')) {
+            wp_register_script('uniformimages-js', plugin_dir_url(__FILE__).'js/uniformimages.js', array('jquery'), '1', true);
+            wp_enqueue_script('uniformimages-js');
         }
         if(!wp_style_is('pa.css', $list = 'enqueued')) {
             wp_register_style('pa', plugin_dir_url(__FILE__).'css/pa.css');
