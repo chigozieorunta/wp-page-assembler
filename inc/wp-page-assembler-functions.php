@@ -39,7 +39,7 @@ function fn_get_alternate($alternate) {
 }
 
 function getImage($post) {
-	$image = wp_get_attachment_image_src(get_post_thumbanil_id($post->ID), 'full');
+	$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 	$image = $image[0];
 	return $image;
 }
