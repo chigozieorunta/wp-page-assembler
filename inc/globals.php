@@ -17,6 +17,19 @@ foreach($pages as $page) {
     $wpPages[$value] = $key;
 }
 
+$wpPosts = [];
+$posts = get_posts('post_type=post&numberposts=-1&posts_per_page=-1&orderby=title&order=ASC');
+foreach($posts as $post) {
+    $key = $post->ID;
+    $value = $post->post_title;
+    $wpPosts[$value] = $key;
+}
+
+$alternates = array(
+    'yes'       => 'yes',
+    'no'        => 'no'
+);
+
 $iconPositions = array(
     'top'       => 'top',
     'side'      => 'side'
