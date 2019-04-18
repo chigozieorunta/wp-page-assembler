@@ -15,7 +15,7 @@
                         <div class="pa-block-padding">
                             <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?= $the_post->post_title; ?></h2>
 							<div style="margin-bottom: 20px;">
-								<?= wpautop($the_post->post_content, false); ?>
+                                <?= $the_post->post_content; ?>
 							</div>
                             <?php if($instance['callToActionButtonText']): ?>
                                 <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
