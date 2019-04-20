@@ -1,3 +1,5 @@
+
+<!--Slider-->
 <section class="pa-section pa-fullscreen" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <div class="pa-fullscreen-child" style="background-color: rgba(0,0,0,0.5);">
         <div class="container-fluid">
