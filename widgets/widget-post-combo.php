@@ -40,7 +40,7 @@ class pa_post_combo extends WP_Widget {
         extract($args);
         $the_post = get_post($instance['post']);
         $image = getImage($the_post);
-        $instance['height'] = ($instance['height']? $instance['height'] : 400);
+        $instance['height'] = ($instance['height'] ? $instance['height'] : 400);
         require(WPPAGEASSEMBLER.'templates/template-post-combo.php');
     }
 
@@ -67,13 +67,14 @@ class pa_post_combo extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpPosts, $alternates, $wpPages;
+        global $wpPosts, $alternates, $wpPages, $textAlign;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "post"                      => $wpPosts,            
             "alternate"                 => $alternates,
             "height"                    => "text",
+            "textAlign"                 => $textAlign,
             "captionColor"              => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
