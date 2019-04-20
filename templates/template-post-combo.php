@@ -13,9 +13,9 @@
                 <div class="pa-fullscreen">
                     <div class="pa-fullscreen-child">     
                         <div class="pa-block-padding" style="text-align: <?= $instance['textAlign']; ?>">
-                            <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?= $the_post->post_title; ?></h2>
+                            <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?= $post->post_title; ?></h2>
 							<div style="margin-bottom: 20px;">
-                                <?= $the_post->post_content; ?>
+                                <?= $post->post_content; ?>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
