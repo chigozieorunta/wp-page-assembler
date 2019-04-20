@@ -64,7 +64,7 @@ class pa_banner extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpPosts, $alternates, $wpPages, $textAlign;
+        global $wpPages;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
