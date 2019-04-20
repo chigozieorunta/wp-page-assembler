@@ -64,12 +64,7 @@ class pa_slider extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        $textAlign = array(
-            'left'      => 'left',
-            'center'    => 'center',
-            'right'     => 'right',
-            'justify'   => 'justify'
-        );
+        global $textAlign;
         $sliderControls = array(
             "title"             => "text",
             "footnote"          => "text",
