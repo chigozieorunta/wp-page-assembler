@@ -21,20 +21,6 @@ html, body {
 	background-size: cover; 
 }
 
-.pa-overlay {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	opacity: 0.5;
-}
-
-.pa-caption {
-	margin-top: 0;
-	margin-bottom: 15px;
-	font-weight: 400 !important;
-}
-
 .pa-section-xs {
 	padding: 1.5em 0;
 }
@@ -52,5 +38,25 @@ html, body {
 }
 
 .pa-block-padding {
-	padding: 0 6em;
+	padding: 3em;
+}
+
+.pa-overlay {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	opacity: 0.5;
+}
+
+.pa-caption {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 400 !important;
+}
+
+@media only screen and (min-width: 768px) {
+	.pa-block-padding {	
+		padding: 0 6em;
+	}
 }
