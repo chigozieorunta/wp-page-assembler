@@ -38,8 +38,7 @@ class pa_post_combo extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        $the_post = get_post($instance['post']);
-        $image = getImage($the_post);
+        $post = get_post($instance['post']); $image = getImage($post);
         $instance['height'] = ($instance['height'] ? $instance['height'] : 400);
         require(WPPAGEASSEMBLER.'templates/template-post-combo.php');
     }
