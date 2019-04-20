@@ -64,7 +64,6 @@ class pa_contact_form extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpPosts, $alternates, $wpPages, $textAlign;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
