@@ -38,10 +38,8 @@ class pa_content_box extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        $the_post = get_post($instance['post']);
-        $image = getImage($the_post);
-        $instance['height'] = ($instance['height'] ? $instance['height'] : 400);
-        require(WPPAGEASSEMBLER.'templates/template-post-combo.php');
+        $post = get_post($instance['post']); $image = getImage($post);
+        require(WPPAGEASSEMBLER.'templates/template-content-box.php');
     }
 
 	/**
