@@ -78,13 +78,13 @@ class pa_post_group extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpCategories, $wpPages, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
+        global $wpCategories, $wpPages, $imagePositions, $wpSortTypes, $wpSortOrders, $columns;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "category"                  => $wpCategories,            
             "numberOfColumns"           => $columns,
-            "imagePosition"             => $iconPositions,
+            "imagePosition"             => $imagePositions,
             "numberOfPosts"             => "text",
             "lengthOfPostText"          => "text",
             "sortType"                  => $wpSortTypes,
