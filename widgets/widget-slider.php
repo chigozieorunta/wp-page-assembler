@@ -64,17 +64,20 @@ class pa_slider extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $textAlign;
+        global $textAlign, $wpPages;
         $sliderControls = array(
-            "title"             => "text",
-            "footnote"          => "text",
-            "revolutionSlider"  => "text",
-            "captionColor"      => "text",
-            "textColor"         => "text",
-            "backgroundColor"   => "text",
-            "backgroundImage"   => "text",
-            "backgroundOverlay" => "text",
-            "textAlign"         => $textAlign
+            "title"                     => "text",
+            "footnote"                  => "text",
+            "revolutionSlider"          => "text",
+            "captionColor"              => "text",
+            "textColor"                 => "text",
+            "backgroundColor"           => "text",
+            "backgroundImage"           => "text",
+            "backgroundOverlay"         => "text",
+            "textAlign"                 => $textAlign,            
+            "callToActionButtonPage"    => $wpPages,
+            "callToActionButtonText"    => "text",
+            "callToActionButtonClass"   => "text"
         );
         $sliderControl = new wpFormControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
