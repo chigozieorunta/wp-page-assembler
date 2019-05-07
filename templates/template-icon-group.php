@@ -13,7 +13,7 @@
                     $icon = get_post_meta($post->ID, 'icon', true);
                 ?>
                 <?php if(!($currentPointer%$numberOfColumns)): ?>
-                <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer <?php endif; ?>row-col-spacer">
+                <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-md <?php endif; ?>row-col-spacer">
                 <?php endif; ?>
                 <?php if($instance['iconPosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
