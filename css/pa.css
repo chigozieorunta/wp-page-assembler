@@ -22,19 +22,19 @@ html, body {
 }
 
 .pa-section-xs {
-	padding: 1.5em 0;
-}
-
-.pa-section-sm {
 	padding: 3em 0;
 }
 
-.pa-section-md {
+.pa-section-sm {
 	padding: 4.5em 0;
 }
 
-.pa-section-lg {
+.pa-section-md {
 	padding: 6em 0;
+}
+
+.pa-section-lg {
+	padding: 7.5em 0;
 }
 
 .pa-block-padding {
