@@ -1,6 +1,6 @@
 
 <!--Content Box-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-lg" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>    
@@ -12,6 +12,7 @@
                         <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="unim"/>
                     </div>
                     <div class="col-sm-6 <?php if($instance['alternate'] == 'yes'): ?>col-sm-pull-6<?php endif; ?>" style="text-align: <?= $instance['textAlign']; ?>">
+                        <div class="hidden-xs" style="margin-top: 35px;"></div>
                         <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?= $post->post_title; ?></h2>
                         <div style="margin-bottom: 20px;">
                             <?= $post->post_content; ?>
