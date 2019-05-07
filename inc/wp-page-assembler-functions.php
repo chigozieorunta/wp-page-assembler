@@ -39,6 +39,9 @@ function getColumnClass($columns){
 		case '4':
 			$class = 'col-sm-3';
 			break;
+		case '6':
+			$class = 'col-sm-2';
+			break;
 		default:
 			$class = 'col-sm-4';
 			break;
