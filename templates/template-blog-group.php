@@ -14,7 +14,7 @@
                 ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <?php if(!($currentPointer%$numberOfColumns)): ?>
-                    <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer <?php endif; ?>row-col-spacer">
+                    <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                     <?php endif; ?>
                     <div class="<?= $columnClass; ?>">
                         <a href="<?php the_permalink(); ?>">
@@ -45,7 +45,7 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'side'): ?>
                     <?php $count++; ?>
-                    <div class="row <?php if($instance['callToActionButtonText'] || ($count < $totalPosts)): ?>row-spacer <?php endif; ?>row-col-spacer">
+                    <div class="row <?php if($instance['callToActionButtonText'] || ($count < $totalPosts)): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                         <div class="col-sm-4">
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?= $image; ?>" class="unim"/>
