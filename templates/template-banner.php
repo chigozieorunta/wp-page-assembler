@@ -7,10 +7,14 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>">
-                    <?= $instance['title']; ?>
-                </h2>
-                <summary><?= $instance['footnote']; ?></summary>
+                <?php if(trim($instance['title'])): ?>
+                    <h2 class="pa-caption" style="color: <?= $instance['captionColor']; ?>">
+                        <?= $instance['title']; ?>
+                    </h2>
+                <?php endif; ?>
+                <?php if(trim($instance['footnote'])): ?>
+                    <summary><?= $instance['footnote']; ?></summary>
+                <?php endif; ?>
                 <?php if($instance['callToActionButtonText']): ?>
                 <div class="row" style="margin-top: 1em;">
                     <div class="col-sm-12">
