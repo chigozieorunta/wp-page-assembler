@@ -13,7 +13,7 @@
                     $image = getImage($post);
                 ?>
                 <?php if(!($currentPointer%$numberOfColumns)): ?>
-                <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer <?php endif; ?>row-col-spacer">
+                <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
@@ -35,6 +35,7 @@
                                 <img src="<?= $image; ?>" class="unim-square"/>
                             </div>
                             <div class="col-sm-6">
+                                <div class="hidden-xs" style="margin-top: 35px;"></div>
                                 <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                                 <?php if($instance['lengthOfPostText']): ?>
                                     <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
