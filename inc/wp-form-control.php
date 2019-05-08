@@ -25,7 +25,14 @@ class wpFormControl {
         $vartype = gettype($value);
         switch($vartype) {
             case 'string':
-                require('wp-form-input-text.php');
+                switch($value) {
+                    case 'text':
+                        require('wp-form-input-text.php');
+                        break;
+                    case 'multiline':
+                        require('wp-form-input-textarea.php');
+                        break;
+                }
                 break;
             case 'array':
                 require('wp-form-input-select.php');
