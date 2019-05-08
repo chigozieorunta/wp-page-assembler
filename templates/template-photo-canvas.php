@@ -12,9 +12,9 @@
                     $image = getImage($post);
                 ?>
                 <?php if(!($currentPointer%$numberOfColumns)): ?>
-                <div class="row <?php if($instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
+                <div class="row <?php if($instance['callToActionButtonText']): ?>row-spacer-lg<?php endif; ?>">
                 <?php endif; ?>
-                <div class="<?= $columnClass; ?>" style="padding: 0 !important;">
+                <div class="<?= $columnClass; ?> col-xs-6" style="padding: 0 !important;">
                     <img src="<?= $image; ?>" class="unim-square"/>
                 </div>
                 <?php $currentPointer++; ?>
