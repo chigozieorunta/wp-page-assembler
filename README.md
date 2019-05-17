@@ -3,3 +3,7 @@ The Page Assembler WordPress Plugin is a collection of WordPress widgets designe
 
 ### The Slider Widget (PA Slider)
 The slider widget is used for displaying a big fullscreen slider. It provides options for adding a caption, footnote, revolution slider, background color, background image, caption color, text color.
+<ul>
+    <li>Caption</li>
+    <li>Footnote</li>
+</ul>
