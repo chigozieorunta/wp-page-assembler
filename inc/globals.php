@@ -1,6 +1,6 @@
 <?php
 
-global $wpCategories, $wpPages, $iconPositions, $imagePositions, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
+global $wpCategories, $wpPages, $iconPositions, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
 
 $wpCategories = [];
 $categories = get_categories();
@@ -38,6 +38,14 @@ $iconPositions = array(
 $imagePositions = array(
     'top'       => 'top',
     'side'      => 'side'
+);
+
+$imageShapes = array(
+    'square'        => 'square',
+    'landscape'     => 'landscape',
+    'portrait'      => 'portrait',
+    'circle'        => 'circle',
+    'diamond'       => 'diamond'
 );
 
 $wpSortTypes = array(
