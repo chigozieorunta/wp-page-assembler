@@ -23,7 +23,8 @@
             }
     
             //Add Image URL
-            if(divClass != 'unim-diamond') {
+            var n = divClass.indexOf("unim-diamond");
+            if(n < 0) {
                 dynamicDiv += '<div class="unim-placeholder">';
                 dynamicDiv += '<div>';
                 dynamicDiv += '<div class="unim-icon"></div>';
