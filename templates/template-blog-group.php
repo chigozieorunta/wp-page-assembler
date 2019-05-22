@@ -1,6 +1,6 @@
 
 <!--Blog Group-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-md pa-blog-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -18,7 +18,7 @@
                     <?php endif; ?>
                     <div class="<?= $columnClass; ?>">
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?= $image; ?>" class="unim"/>
+                            <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                         </a>
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-xs-3">
@@ -48,7 +48,7 @@
                     <div class="row <?php if($instance['callToActionButtonText'] || ($count < $totalPosts)): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                         <div class="col-sm-4">
                             <a href="<?php the_permalink(); ?>">
-                                <img src="<?= $image; ?>" class="unim"/>
+                                <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                             </a>
                         </div>              
                         <div class="col-sm-8">
@@ -59,7 +59,7 @@
                             <?= get_the_excerpt(); ?>
                             <div class="row" style="margin-top: 15px;">
                                 <div class="col-sm-12">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>">Read More</a>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?= $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
