@@ -1,6 +1,6 @@
 
 <!--Content Box-->
-<section class="pa-section pa-section-lg" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-lg pa-content-box" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>    
@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <div class="row row-col-spacer">
-                    <div class="col-sm-6 <?php if($instance['alternate'] == 'yes'): ?>col-sm-push-6<?php endif; ?>">
-                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="unim"/>
+                    <div class="col-sm-6 <?php if($instance['alternate'] == 'yes'): ?>col-sm-push-6<?php endif; ?>">     
+                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                     </div>
                     <div class="col-sm-6 <?php if($instance['alternate'] == 'yes'): ?>col-sm-pull-6<?php endif; ?>" style="text-align: <?= $instance['textAlign']; ?>">
                         <div class="hidden-xs" style="margin-top: 35px;"></div>
@@ -21,7 +21,7 @@
                             <div class="col-sm-12">
                                 <?php if($instance['callToActionButtonText']): ?>
                                     <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                                    <a href="<?php echo $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                                    <a href="<?php echo $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                                 <?php endif; ?>
                             </div>
                         </div>
