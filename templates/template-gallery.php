@@ -17,7 +17,7 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
-                        <img src="<?= $image; ?>" class="pa-gallery unim-square"/>
+                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="pa-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                         <h4 class="pa-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                         <div style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
@@ -32,7 +32,7 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row row-col-spacer">
                             <div class="col-sm-6">
-                                <img src="<?= $image; ?>" class="pa-gallery unim-square"/>
+                                <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="pa-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                             </div>
                             <div class="col-sm-6">
                                 <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
