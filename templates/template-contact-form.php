@@ -1,6 +1,6 @@
 
 <!--Contact Form-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-md pa-contact-form" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="form-group">
-                                <button type="submit" class="btn <?= $instance['submitButtonClass']; ?>"><?= $instance['submitButtonText']; ?></button>
+                                <button type="submit" class="btn pa-anchor-btn <?= $instance['submitButtonClass']; ?>"><?= $instance['submitButtonText']; ?></button>
                             </div>
                         </div>
                     </div>
