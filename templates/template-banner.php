@@ -1,6 +1,6 @@
 
 <!--Banner-->
-<section class="pa-section pa-section-lg" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-lg pa-banner" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -13,13 +13,13 @@
                     </h2>
                 <?php endif; ?>
                 <?php if(trim($instance['footnote'])): ?>
-                    <summary><?= $instance['footnote']; ?></summary>
+                    <summary class="pa-summary"><?= $instance['footnote']; ?></summary>
                 <?php endif; ?>
                 <?php if($instance['callToActionButtonText']): ?>
                 <div class="row" style="margin-top: 1em;">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?php echo $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?php echo $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
