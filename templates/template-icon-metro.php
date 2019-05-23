@@ -1,6 +1,6 @@
 
 <!--Icon Metro-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-md pa-icon-metro" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -9,8 +9,8 @@
             <div class="col-sm-10 col-sm-offset-1">
                 <div class="row <?php if($instance['callToActionButtonText']): ?>row-spacer-lg<?php endif; ?> row-col-spacer">
                     <div class="col-sm-4 text-center">
-                        <h1 style="font-size: 64px; color: <?= $instance['captionColor']; ?>"><?= $instance['title']; ?></h1><br/>
-                        <summary><?= $instance['footnote']; ?></summary>
+                        <h1 class="pa-hero" style="font-size: 64px; color: <?= $instance['captionColor']; ?>"><?= $instance['title']; ?></h1><br/>
+                        <summary class="pa-summary"><?= $instance['footnote']; ?></summary>
                     </div>
                     <div class="col-sm-8">
                         <?php
@@ -64,7 +64,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?php echo $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?php echo $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
