@@ -1,6 +1,6 @@
 
 <!--Photo Canvas-->
-<section style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-photo-canvas" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -15,7 +15,7 @@
                 <div class="row <?php if($instance['callToActionButtonText']): ?>row-spacer-lg<?php endif; ?>">
                 <?php endif; ?>
                 <div class="<?= $columnClass; ?> col-xs-6" style="padding: 0 !important;">
-                    <img src="<?= $image; ?>" class="unim-square"/>
+                    <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                 </div>
                 <?php $currentPointer++; ?>
                 <?php if(!($currentPointer%$numberOfColumns) || ($currentPointer == count($posts))): ?>
@@ -28,7 +28,7 @@
                 <div class="row row-spacer-lg text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?= $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
