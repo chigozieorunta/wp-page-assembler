@@ -1,6 +1,6 @@
 
 <!--Post Group-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-section-md pa-post-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -17,7 +17,7 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
-                        <img src="<?= $image; ?>" class="unim"/>
+                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                         <h4 class="pa-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                         <div style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
@@ -32,7 +32,7 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row row-col-spacer">
                             <div class="col-sm-6">
-                                <img src="<?= $image; ?>" class="unim-square"/>
+                                <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                             </div>
                             <div class="col-sm-6">
                                 <div class="hidden-xs" style="margin-top: 35px;"></div>
@@ -57,7 +57,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?= $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
