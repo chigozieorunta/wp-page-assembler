@@ -1,6 +1,6 @@
 
 <!--Slider-->
-<section class="pa-section pa-fullscreen" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="pa-section pa-fullscreen pa-slider" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -14,14 +14,14 @@
                         </h1>
                     <?php endif; ?>
                     <?php if(trim($instance['footnote'])): ?>
-                        <summary><?= $instance['footnote']; ?></summary><br/>
+                        <summary class="pa-summary"><?= $instance['footnote']; ?></summary><br/>
                     <?php endif; ?>
                     
                     <?php if($instance['callToActionButtonText']): ?>
                     <div class="row">
                         <div class="col-sm-12">
                             <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                            <a href="<?= $link; ?>" class="btn btn-primary <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                            <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                         </div>
                     </div>
                     <?php endif; ?>
