@@ -52,7 +52,7 @@ class pa_content_box extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpPosts, $alternates, $wpPages, $textAlign;
+        global $wpPosts, $alternates, $wpPages, $textAlign, $imageShapes;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
@@ -60,6 +60,8 @@ class pa_content_box extends WP_Widget {
             "alternate"                 => $alternates,
             "height"                    => "text",
             "textAlign"                 => $textAlign,
+            "imageUniform"              => $alternates,
+            "imageShape"                => $imageShapes,
             "captionColor"              => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",

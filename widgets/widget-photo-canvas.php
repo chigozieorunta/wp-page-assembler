@@ -65,7 +65,7 @@ class pa_photo_canvas extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpCategories, $wpPages, $wpSortTypes, $wpSortOrders, $columns;
+        global $wpCategories, $wpPages, $wpSortTypes, $wpSortOrders, $columns, $alternates, $imageShapes;
         $sliderControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
@@ -74,6 +74,8 @@ class pa_photo_canvas extends WP_Widget {
             "numberOfPosts"             => "text",
             "sortType"                  => $wpSortTypes,
             "sortOrder"                 => $wpSortOrders,
+            "imageUniform"              => $alternates,
+            "imageShape"                => $imageShapes,
             "captionColor"              => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
