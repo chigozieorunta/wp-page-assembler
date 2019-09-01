@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP Widgetify
+ * Plugin Name: Widgetify
  * Plugin URI:  https://github.com/chigozieorunta/wp-widgetify
  * Description: The Widgetify WordPress Plugin is a collection of custom widgets designed to help web designers build sections of their web pages easily by simply dragging and droping.
  * Version:     1.0.0
@@ -56,10 +56,10 @@ class wpWidgetify {
 	 */
     public static function registerMenu() {
         add_menu_page(
-            'wp-widgetify', 
-            'wp-widgetify', 
+            'Widgetify', 
+            'Widgetify', 
             'manage_options', 
-            'wp-widgetify', 
+            'Widgetify', 
             array(get_called_class(), 'registerHTML')
         );
     }
