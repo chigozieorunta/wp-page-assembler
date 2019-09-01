@@ -5,12 +5,12 @@ html, body {
 	width: 100%; height: 100%;
 }
 
-.pa-fullscreen {
+.widgetify-fullscreen {
     display: table;
     width: 100%; height: 100%;
 }
 
-.pa-fullscreen-child {
+.widgetify-fullscreen-child {
     display: table-cell;
     vertical-align: middle;
     width: 100%; height: 100%;
@@ -18,148 +18,148 @@ html, body {
 
 /* SECTIONS */
 
-.pa-section {
+.widgetify-section {
     position: relative;
 	background-position: center;
 	background-repeat: no-repeat; 
 }
 
-.pa-section-xs {
+.widgetify-section-xs {
 	padding: 3em 0;
 }
 
-.pa-section-sm {
+.widgetify-section-sm {
 	padding: 4.5em 0;
 }
 
-.pa-section-md {
+.widgetify-section-md {
 	padding: 6em 0;
 }
 
-.pa-section-lg {
+.widgetify-section-lg {
 	padding: 7.5em 0;
 }
 
 /* MARGIN */
 
-.pa-margin-top {
+.widgetify-margin-top {
 	margin-top: 15px;
 }
 
-.pa-margin-right {
+.widgetify-margin-right {
 	margin-right: 15px;
 }
 
-.pa-margin-bottom {
+.widgetify-margin-bottom {
 	margin-bottom: 15px;
 }
 
-.pa-margin-left {
+.widgetify-margin-left {
 	margin-left: 15px;
 }
 
-.pa-no-margin-top {
+.widgetify-no-margin-top {
 	margin-top: 0 !important;
 }
 
-.pa-no-margin-right {
+.widgetify-no-margin-right {
 	margin-right: 0 !important;
 }
 
-.pa-no-margin-bottom {
+.widgetify-no-margin-bottom {
 	margin-bottom: 0 !important;
 }
 
-.pa-no-margin-left {
+.widgetify-no-margin-left {
 	margin-left: 0 !important;
 }
 
 /* PADDING */
 
-.pa-padding-top {
+.widgetify-padding-top {
 	padding-top: 15px;
 }
 
-.pa-padding-right {
+.widgetify-padding-right {
 	padding-right: 15px;
 }
 
-.pa-padding-bottom {
+.widgetify-padding-bottom {
 	padding-bottom: 15px;
 }
 
-.pa-padding-left {
+.widgetify-padding-left {
 	padding-left: 15px;
 }
 
-.pa-no-padding-top {
+.widgetify-no-padding-top {
 	padding-top: 0 !important;
 }
 
-.pa-no-padding-right {
+.widgetify-no-padding-right {
 	padding-right: 0 !important;
 }
 
-.pa-no-padding-bottom {
+.widgetify-no-padding-bottom {
 	padding-bottom: 0 !important;
 }
 
-.pa-no-padding-left {
+.widgetify-no-padding-left {
 	padding-left: 0 !important;
 }
 
 /* SOCIAL MEDIA */
 
-.pa-social-media {
+.widgetify-social-media {
 	position: fixed; 
 	z-index: 100000000; 
 	width: 50px; height: 100%; 
 	top: 0; bottom: 0; left: 0; right: 0;
 }
 
-.pa-facebook {
+.widgetify-facebook {
 	height: 50px;
 	background: #3B579D;
 	color: #FFFFFF;
 }
 
-.pa-twitter {
+.widgetify-twitter {
 	height: 50px;
 	background: #00ACED;
 	color: #FFFFFF;
 }
 
-.pa-instagram {
+.widgetify-instagram {
 	height: 50px;
 	background: #D80053;
 	color: #FFFFFF;
 }
 
-.pa-linkedin {
+.widgetify-linkedin {
 	height: 50px;
 	background: #0271AE;
 	color: #FFFFFF;
 }
 
-.pa-youtube {
+.widgetify-youtube {
 	height: 50px;
 	background: #F80000;
 	color: #FFFFFF;
 }
 
-.pa-social-media a {
+.widgetify-social-media a {
 	color: #FFFFFF !important;
 }
 
 /* WIDGET PROPERTIES */
 
-.pa-caption {
+.widgetify-caption {
 	margin-top: 0;
 	margin-bottom: 15px;
 	font-weight: 400 !important;
 }
 
-.pa-overlay {
+.widgetify-overlay {
 	content: "";
 	display: block;
 	position: absolute;
@@ -167,13 +167,13 @@ html, body {
 	opacity: 0.5;
 }
 
-.pa-block-padding {
+.widgetify-block-padding {
 	padding: 3em;
 }
 
 /* FORM CONTROLS */
 
-.pa-control {
+.widgetify-control {
 	border: none !important;
 	border-bottom: 1px solid #CDE !important;
 	box-shadow: none !important;
@@ -182,17 +182,17 @@ html, body {
 	border-radius: 0 !important;
 }
 
-.pa-control + i {
+.widgetify-control + i {
 	margin-top: 15px;
 }
 
 /* GALLERY */
 
-.pa-gallery {
+.widgetify-gallery {
 	cursor: pointer;
 }
 
-.pa-slideshow {
+.widgetify-slideshow {
 	position: fixed; 
 	top: 0; bottom: 0; right: 0; left: 0; 
 	background: rgba(0, 0, 0, 0.5); 
@@ -201,7 +201,7 @@ html, body {
 	display: none;
 }
 
-.pa-slideshow-image {
+.widgetify-slideshow-image {
 	height: 480px; 
 	background-color: #101010; 
 	background-repeat: no-repeat; 
@@ -209,14 +209,14 @@ html, body {
 	border: 10px solid #fff; 
 }
 
-.pa-date {
+.widgetify-date {
 	margin-bottom: -7.5px; 
 	font-weight: 700; 
 	font-size: 18px;
 }
 
 @media only screen and (min-width: 768px) {
-	.pa-block-padding {	
+	.widgetify-block-padding {	
 		padding: 0 6em;
 	}
 }
