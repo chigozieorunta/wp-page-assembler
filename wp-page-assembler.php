@@ -1,30 +1,30 @@
 <?php
 /**
- * Plugin Name: WP Page Assembler
- * Plugin URI:  https://github.com/chigozieorunta/wp-page-assembler
- * Description: The Page Assember WordPress Plugin is a collection of custom widgets designed to help web designers build sections of their web pages easily by simply dragging and droping.
+ * Plugin Name: WP Widgetify
+ * Plugin URI:  https://github.com/chigozieorunta/wp-widgetify
+ * Description: The Widgetify WordPress Plugin is a collection of custom widgets designed to help web designers build sections of their web pages easily by simply dragging and droping.
  * Version:     1.0.0
  * Author:      Chigozie Orunta
  * Author URI:  https://github.com/chigozieorunta
  * License:     MIT
- * Text Domain: wp-page-assembler
+ * Text Domain: wp-widgetify
  * Domain Path: ./
  */
 
 //Define Plugin Path
-define("WPPAGEASSEMBLER", plugin_dir_path(__FILE__));
+define("WPWIDGETIFY", plugin_dir_path(__FILE__));
 
 //Custom Functions
-require_once('inc/wp-page-assembler-functions.php');
-require_once('inc/wp-form-control.php');
-require_once('inc/globals.php');
+require_once('inc/wp-widgetify-functions.php');
+require_once('inc/wp-widgetify-controls.php');
+require_once('inc/wp-widgetify-globals.php');
 
-wpPageAssembler::getInstance();
+wpWidgetify::getInstance();
 
 /**
- * Class wpPageAssembler
+ * Class wpWidgetify
  */
-class wpPageAssembler {
+class wpWidgetify {
     /**
 	 * Constructor
 	 *
@@ -56,10 +56,10 @@ class wpPageAssembler {
 	 */
     public static function registerMenu() {
         add_menu_page(
-            'wp-page-assembler', 
-            'wp-page-assembler', 
+            'wp-widgetify', 
+            'wp-widgetify', 
             'manage_options', 
-            'wp-page-assembler', 
+            'wp-widgetify', 
             array(get_called_class(), 'registerHTML')
         );
     }
@@ -83,9 +83,9 @@ class wpPageAssembler {
             wp_register_style('uniformimages', plugin_dir_url(__FILE__).'css/uniformimages.css');
             wp_enqueue_style('uniformimages');
         }
-        if(!wp_style_is('pa.css', $list = 'enqueued')) {
-            wp_register_style('pa', plugin_dir_url(__FILE__).'css/pa.css');
-            wp_enqueue_style('pa');
+        if(!wp_style_is('widgetify.css', $list = 'enqueued')) {
+            wp_register_style('widetify-css', plugin_dir_url(__FILE__).'css/widgetify.css');
+            wp_enqueue_style('widgetify-css');
         }
         if(!wp_script_is('uniformimages.js', $list = 'enqueued')) {
             wp_register_script('uniformimages-js', plugin_dir_url(__FILE__).'js/uniformimages.js', array('jquery'), '1', true);
@@ -104,7 +104,7 @@ class wpPageAssembler {
 	 * @since  1.0.0
 	 */
     public static function registerHTML() {
-        require_once('wp-page-assembler-html.php');
+        require_once('wp-widgetify-html.php');
     }
 
     /**
