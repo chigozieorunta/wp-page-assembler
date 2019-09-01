@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="wrap about-wrap full-width-layout">
-		    <h1>WP Widgetify</h1>
+		    <h1>Widgetify</h1>
             <p class="about-text">The Widgetify WordPress Plugin is a collection of WordPress widgets designed to help web designers build sections of their web page easily via drag and drop.</p>
             </p>
             <h2 class="nav-tab-wrapper wp-clearfix">
