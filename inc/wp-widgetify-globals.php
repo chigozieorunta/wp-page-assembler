@@ -41,6 +41,7 @@ $imagePositions = array(
 );
 
 $imageShapes = array(
+    'default'       => 'default',
     'square'        => 'square',
     'landscape'     => 'landscape',
     'portrait'      => 'portrait',
