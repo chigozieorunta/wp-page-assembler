@@ -91,9 +91,9 @@ class wpWidgetify {
             wp_register_script('uniformimages-js', plugin_dir_url(__FILE__).'js/uniformimages.js', array('jquery'), '1', true);
             wp_enqueue_script('uniformimages-js');
         }
-        if(!wp_script_is('pa-gallery.js', $list = 'enqueued')) {
-            wp_register_script('pa-gallery-js', plugin_dir_url(__FILE__).'js/pa-gallery.js', array('jquery'), '1', true);
-            wp_enqueue_script('pa-gallery-js');
+        if(!wp_script_is('widgetify.js', $list = 'enqueued')) {
+            wp_register_script('widgetify-js', plugin_dir_url(__FILE__).'js/widgetify.js', array('jquery'), '1', true);
+            wp_enqueue_script('widgetify-js');
         }
     }
 
