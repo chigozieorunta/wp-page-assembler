@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_contact_form");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_contact_form");'));
 
-class pa_contact_form extends WP_Widget {
+class widgetify_contact_form extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_contact_form extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_contact_form',
-			__('PA Contact Form', 'widget_name'),
+			'widgetify_contact_form',
+			__('Widgetify Contact Form', 'widget_name'),
 			array('description' => __('Display Contact Form...'))
 		);
 	}
@@ -25,7 +25,7 @@ class pa_contact_form extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        require(WPPAGEASSEMBLER.'templates/template-contact-form.php');
+        require(WPWIDGETIFY.'templates/template-contact-form.php');
     }
 
 	/**
@@ -51,7 +51,7 @@ class pa_contact_form extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "email"                     => "text",
@@ -66,9 +66,9 @@ class pa_contact_form extends WP_Widget {
             "submitButtonText"          => "text",
             "submitButtonClass"         => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

@@ -69,7 +69,7 @@ class widgetify_blog_group extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $alternates, $wpCategories, $wpPages, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $columns;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "category"                  => $wpCategories,            
@@ -90,9 +90,9 @@ class widgetify_blog_group extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpWidgetifyControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

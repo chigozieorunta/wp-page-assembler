@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_content_box");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_content_box");'));
 
-class pa_content_box extends WP_Widget {
+class widgetify_content_box extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_content_box extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_content_box',
-			__('PA Content Box', 'widget_name'),
+			'widgetify_content_box',
+			__('Widgetify Content Box', 'widget_name'),
 			array('description' => __('Display Content Box...'))
 		);
 	}
@@ -26,7 +26,7 @@ class pa_content_box extends WP_Widget {
 	function widget($args, $instance) {
         extract($args);
         $post = get_post($instance['post']); $image = getImage($post);
-        require(WPPAGEASSEMBLER.'templates/template-content-box.php');
+        require(WPWIDGETIFY.'templates/template-content-box.php');
     }
 
 	/**
@@ -53,7 +53,7 @@ class pa_content_box extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpPosts, $alternates, $wpPages, $textAlign, $imageShapes;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "post"                      => $wpPosts,            
@@ -71,9 +71,9 @@ class pa_content_box extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }
