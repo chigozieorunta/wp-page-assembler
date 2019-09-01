@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_google_map");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_google_map");'));
 
-class pa_google_map extends WP_Widget {
+class widgetify_google_map extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_google_map extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_google_map',
-			__('PA Google Map', 'widget_name'),
+			'widgetify_google_map',
+			__('Widgetify Google Map', 'widget_name'),
 			array('description' => __('Display Google Map...'))
 		);
 	}
@@ -26,7 +26,7 @@ class pa_google_map extends WP_Widget {
 	function widget($args, $instance) {
         extract($args);
         $instance['height'] = ($instance['height'] ? $instance['height'] : 400);
-        require(WPPAGEASSEMBLER.'templates/template-google-map.php');
+        require(WPWIDGETIFY.'templates/template-google-map.php');
     }
 
 	/**
@@ -52,15 +52,15 @@ class pa_google_map extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "location"                  => "text",
             "height"                    => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }
