@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_blog_group");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_blog_group");'));
 
-class pa_blog_group extends WP_Widget {
+class widgetify_blog_group extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_blog_group extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_blog_group',
-			__('PA Blog Group', 'widget_name'),
+			'widgetify_blog_group',
+			__('Widgetify Blog Group', 'widget_name'),
 			array('description' => __('Display Blog Group...'))
 		);
 	}
@@ -90,7 +90,7 @@ class pa_blog_group extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
+        $sliderControl = new wpWidgetifyControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
             $sliderControl->getControl($key, $value);
         }

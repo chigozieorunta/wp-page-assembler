@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_banner");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_banner");'));
 
-class pa_banner extends WP_Widget {
+class widgetify_banner extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_banner extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_banner',
-			__('PA Banner', 'widget_name'),
+			'widgetify_banner',
+			__('Widgetify Banner', 'widget_name'),
 			array('description' => __('Display Banner...'))
 		);
 	}
@@ -25,7 +25,7 @@ class pa_banner extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        require(WPPAGEASSEMBLER.'templates/template-banner.php');
+        require(WPWIDGETIFY.'templates/template-banner.php');
     }
 
 	/**
@@ -64,7 +64,7 @@ class pa_banner extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
+        $sliderControl = new wpWidgetifyControl($this, $instance);
         foreach($sliderControls as $key=>$value) {
             $sliderControl->getControl($key, $value);
         }
