@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class wpFormControl
+ * Class wpWidgetifyControl
 */
-class wpFormControl {
+class wpWidgetifyControl {
     /**
 	 * Constructor
 	 *
