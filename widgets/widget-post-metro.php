@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_post_metro");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_post_metro");'));
 
-class pa_post_metro extends WP_Widget {
+class widgetify_post_metro extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_post_metro extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_post_metro',
-			__('PA Post Metro', 'widget_name'),
+			'widgetify_post_metro',
+			__('Widgetify Post Metro', 'widget_name'),
 			array('description' => __('Display Post Metro...'))
 		);
 	}
@@ -39,7 +39,7 @@ class pa_post_metro extends WP_Widget {
         $currentPointer = 0; $currentRow = 1; 
         $numberOfColumns = $instance['numberOfColumns'];
         $numberOfRows = ceil(count($posts)/$numberOfColumns);
-        require(WPPAGEASSEMBLER.'templates/template-post-metro.php');
+        require(WPWIDGETIFY.'templates/template-post-metro.php');
     }
 
 	/**
@@ -66,7 +66,7 @@ class pa_post_metro extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $alternates, $wpCategories, $wpPages, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $columns;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "category"                  => $wpCategories,            
@@ -87,9 +87,9 @@ class pa_post_metro extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

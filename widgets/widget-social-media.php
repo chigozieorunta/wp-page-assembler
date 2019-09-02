@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_social_media");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_social_media");'));
 
-class pa_social_media extends WP_Widget {
+class widgetify_social_media extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_social_media extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_social_media',
-			__('PA Social Media', 'widget_name'),
+			'widgetify_social_media',
+			__('Widgetify Social Media', 'widget_name'),
 			array('description' => __('Display Social Media icons...'))
 		);
 	}
@@ -25,7 +25,7 @@ class pa_social_media extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        require(WPPAGEASSEMBLER.'templates/template-social-media.php');
+        require(WPWIDGETIFY.'templates/template-social-media.php');
     }
 
 	/**
@@ -52,7 +52,7 @@ class pa_social_media extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpPages;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "facebookLink"              => "text",
@@ -61,9 +61,9 @@ class pa_social_media extends WP_Widget {
             "youtubeLink"               => "text",
             "linkedinLink"              => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

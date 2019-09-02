@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_slider");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_slider");'));
 
-class pa_slider extends WP_Widget {
+class widgetify_slider extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_slider extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_slider',
-			__('PA Slider', 'widget_name'),
+			'widgetify_slider',
+			__('Widgetify Slider', 'widget_name'),
 			array('description' => __('Display Revolution Slider...'))
 		);
 	}
@@ -25,7 +25,7 @@ class pa_slider extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        require_once(WPPAGEASSEMBLER.'templates/template-slider.php');
+        require_once(WPWIDGETIFY.'templates/template-slider.php');
     }
 
 	/**
@@ -52,7 +52,7 @@ class pa_slider extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $textAlign, $wpPages;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "revolutionSlider"          => "text",
@@ -66,9 +66,9 @@ class pa_slider extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }
