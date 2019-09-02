@@ -57,7 +57,7 @@ class widgetify_html extends WP_Widget {
             "footnote"                  => "text",
             "html"                      => "multiline"
         );
-        $widgetControl = new wpFormControl($this, $instance);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
             $widgetControl->getControl($key, $value);
         }

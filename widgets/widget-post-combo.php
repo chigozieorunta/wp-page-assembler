@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_post_combo");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_post_combo");'));
 
-class pa_post_combo extends WP_Widget {
+class widgetify_post_combo extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_post_combo extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_post_combo',
-			__('PA Post Combo', 'widget_name'),
+			'widgetify_post_combo',
+			__('Widgetify Post Combo', 'widget_name'),
 			array('description' => __('Display Post Combo...'))
 		);
 	}
@@ -27,7 +27,7 @@ class pa_post_combo extends WP_Widget {
         extract($args);
         $post = get_post($instance['post']); $image = getImage($post);
         $instance['height'] = ($instance['height'] ? $instance['height'] : 400);
-        require(WPPAGEASSEMBLER.'templates/template-post-combo.php');
+        require(WPWIDGETIFY.'templates/template-post-combo.php');
     }
 
 	/**
@@ -54,7 +54,7 @@ class pa_post_combo extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpPosts, $alternates, $wpPages, $textAlign, $imageShapes;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "post"                      => $wpPosts,            
@@ -72,9 +72,9 @@ class pa_post_combo extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

@@ -85,7 +85,7 @@ class widgetify_icon_group extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $widgetControl = new wpFormControl($this, $instance);
+        $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
             $widgetControl->getControl($key, $value);
         }
