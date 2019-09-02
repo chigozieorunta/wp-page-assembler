@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_html");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_html");'));
 
-class pa_html extends WP_Widget {
+class widgetify_html extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_html extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_html',
-			__('PA HTML Container', 'widget_name'),
+			'widgetify_html',
+			__('Widgetify HTML Container', 'widget_name'),
 			array('description' => __('Display HTML Container...'))
 		);
 	}
@@ -25,7 +25,7 @@ class pa_html extends WP_Widget {
     */
 	function widget($args, $instance) {
         extract($args);
-        require(WPPAGEASSEMBLER.'templates/template-html-container.php');
+        require(WPWIDGETIFY.'templates/template-html-container.php');
     }
 
 	/**
@@ -52,14 +52,14 @@ class pa_html extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpPages;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "html"                      => "multiline"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpFormControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }

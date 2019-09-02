@@ -1,8 +1,8 @@
 <?php
 
-add_action('widgets_init', create_function('', 'return register_widget("pa_icon_group");'));
+add_action('widgets_init', create_function('', 'return register_widget("widgetify_icon_group");'));
 
-class pa_icon_group extends WP_Widget {
+class widgetify_icon_group extends WP_Widget {
     /**
      * WordPress Widget Constructor Method
 	 *
@@ -11,8 +11,8 @@ class pa_icon_group extends WP_Widget {
     */
 	function __construct() {
 		parent::__construct(
-			'pa_icon_group',
-			__('PA Icon Group', 'widget_name'),
+			'widgetify_icon_group',
+			__('Widgetify Icon Group', 'widget_name'),
 			array('description' => __('Display Icon Group...'))
 		);
 	}
@@ -39,7 +39,7 @@ class pa_icon_group extends WP_Widget {
         $currentPointer = 0; $currentRow = 1; 
         $numberOfColumns = $instance['numberOfColumns'];
         $numberOfRows = ceil(count($posts)/$numberOfColumns);
-        require(WPPAGEASSEMBLER.'templates/template-icon-group.php');
+        require(WPWIDGETIFY.'templates/template-icon-group.php');
     }
 
 	/**
@@ -66,7 +66,7 @@ class pa_icon_group extends WP_Widget {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
         global $wpCategories, $wpPages, $iconPositions, $wpSortTypes, $wpSortOrders, $columns;
-        $sliderControls = array(
+        $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
             "category"                  => $wpCategories,            
@@ -85,9 +85,9 @@ class pa_icon_group extends WP_Widget {
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text"
         );
-        $sliderControl = new wpFormControl($this, $instance);
-        foreach($sliderControls as $key=>$value) {
-            $sliderControl->getControl($key, $value);
+        $widgetControl = new wpFormControl($this, $instance);
+        foreach($widgetControls as $key=>$value) {
+            $widgetControl->getControl($key, $value);
         }
 	}
 }
