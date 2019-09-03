@@ -58,6 +58,54 @@ html, body {
 	margin-left: 15px;
 }
 
+.widgetify-margin-top-sm {
+	margin-top: 7.5px;
+}
+
+.widgetify-margin-right-sm {
+	margin-right: 7.5px;
+}
+
+.widgetify-margin-bottom-sm {
+	margin-bottom: 7.5px;
+}
+
+.widgetify-margin-left-sm {
+	margin-left: 7.5px;
+}
+
+.widgetify-margin-top-lg {
+	margin-top: 22.5px;
+}
+
+.widgetify-margin-right-lg {
+	margin-right: 22.5px;
+}
+
+.widgetify-margin-bottom-lg {
+	margin-bottom: 22.5px;
+}
+
+.widgetify-margin-left-lg {
+	margin-left: 22.5px;
+}
+
+.widgetify-margin-top-xlg {
+	margin-top: 30px;
+}
+
+.widgetify-margin-right-xlg {
+	margin-right: 30px;
+}
+
+.widgetify-margin-bottom-xlg {
+	margin-bottom: 30px;
+}
+
+.widgetify-margin-left-xlg {
+	margin-left: 30px;
+}
+
 .widgetify-no-margin-top {
 	margin-top: 0 !important;
 }
@@ -72,6 +120,10 @@ html, body {
 
 .widgetify-no-margin-left {
 	margin-left: 0 !important;
+}
+
+.widgetify-no-margin {
+	margin: 0 !important;
 }
 
 /* PADDING */
@@ -92,6 +144,54 @@ html, body {
 	padding-left: 15px;
 }
 
+.widgetify-padding-top-sm {
+	padding-top: 7.5px;
+}
+
+.widgetify-padding-right-sm {
+	padding-right: 7.5px;
+}
+
+.widgetify-padding-bottom-sm {
+	padding-bottom: 7.5px;
+}
+
+.widgetify-padding-left-sm {
+	padding-left: 7.5px;
+}
+
+.widgetify-padding-top-lg {
+	padding-top: 22.5px;
+}
+
+.widgetify-padding-right-lg {
+	padding-right: 22.5px;
+}
+
+.widgetify-padding-bottom-lg {
+	padding-bottom: 22.5px;
+}
+
+.widgetify-padding-left-lg {
+	padding-left: 22.5px;
+}
+
+.widgetify-padding-top-xlg {
+	padding-top: 30px;
+}
+
+.widgetify-padding-right-xlg {
+	padding-right: 30px;
+}
+
+.widgetify-padding-bottom-xlg {
+	padding-bottom: 30px;
+}
+
+.widgetify-padding-left-xlg {
+	padding-left: 30px;
+}
+
 .widgetify-no-padding-top {
 	padding-top: 0 !important;
 }
@@ -106,6 +206,43 @@ html, body {
 
 .widgetify-no-padding-left {
 	padding-left: 0 !important;
+}
+
+.widgetify-no-padding {
+	padding: 0 !important;
+}
+
+/* LETTERING */
+
+.widgetify-hero {
+	font-size: 64px;
+	margin-bottom: 30px;
+	line-height: 1.25;
+	font-family: 'Playfair Display', Arial;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+.widgetify-caption {
+	font-size: 32px;
+	margin-bottom: 20px;
+	line-height: 1.25;
+	letter-spacing: -0.5px;
+}
+
+.widgetify-sub-caption {
+	font-size: 24px;
+	margin-bottom: 15px;
+	line-height: 1.25;
+	letter-spacing: -0.5px;
+}
+
+.widgetify-summary {
+
+}
+
+.widgetify-notes {
+
 }
 
 /* SOCIAL MEDIA */
@@ -152,12 +289,6 @@ html, body {
 }
 
 /* WIDGET PROPERTIES */
-
-.widgetify-caption {
-	margin-top: 0;
-	margin-bottom: 15px;
-	font-weight: 400 !important;
-}
 
 .widgetify-overlay {
 	content: "";
