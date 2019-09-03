@@ -1,5 +1,5 @@
 
-<!--Widgetify Banner-->
+<!--Banner-->
 <section class="widgetify-section widgetify-section-lg widgetify-banner" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>

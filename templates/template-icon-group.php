@@ -1,8 +1,8 @@
 
 <!--Icon Group-->
-<section class="pa-section pa-section-md pa-icon-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md widgetify-icon-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>); padding: <?= $instance['widgetPadding']; ?>px 0;" id="<?= $instance['widgetID']; ?>">
     <?php if($instance['backgroundOverlay']): ?>
-        <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
+        <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
@@ -18,10 +18,10 @@
                 <?php if($instance['iconPosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
                         <?php if($icon): ?>
-                            <i class="<?= $icon; ?>" style="margin-bottom: 15px;"></i>
+                            <i class="<?= $icon; ?>" style="margin-bottom: 15px; color: <?= $instance['iconColor']; ?>"></i>
                         <?php endif; ?>
-                        <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
-                        <div style="margin-top: -7.5px;">
+                        <div class="widgetify-sub-caption" style="color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
+                        <div class="widgetify-notes" style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
                                 <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                             <?php else: ?>
@@ -34,15 +34,17 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row">
                             <div class="col-xs-2 text-right">
-                                <?php if($icon): ?><i class="<?= $icon; ?>"></i><?php endif; ?>
+                                <?php if($icon): ?><i class="<?= $icon; ?>" style="color: <?= $instance['iconColor']; ?>"></i><?php endif; ?>
                             </div>
                             <div class="col-xs-10">
-                                <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
-                                <?php if($instance['lengthOfPostText']): ?>
-                                    <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
-                                <?php else: ?>
-                                    <?= get_the_excerpt(); ?>
-                                <?php endif; ?>
+                                <div class="widgetify-sub-caption" style="color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
+                                <div class="widgetify-notes">
+                                    <?php if($instance['lengthOfPostText']): ?>
+                                        <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
+                                    <?php else: ?>
+                                        <?= get_the_excerpt(); ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,7 +60,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?php echo $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?php echo $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
