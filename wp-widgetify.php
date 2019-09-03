@@ -84,7 +84,7 @@ class wpWidgetify {
             wp_enqueue_style('uniformimages');
         }
         if(!wp_style_is('widgetify.css', $list = 'enqueued')) {
-            wp_register_style('widetify-css', plugin_dir_url(__FILE__).'css/widgetify.css');
+            wp_register_style('widgetify-css', plugin_dir_url(__FILE__).'css/widgetify.css');
             wp_enqueue_style('widgetify-css');
         }
         if(!wp_script_is('uniformimages.js', $list = 'enqueued')) {
