@@ -72,18 +72,25 @@ class widgetify_icon_group extends WP_Widget {
             "category"                  => $wpCategories,            
             "numberOfColumns"           => $columns,
             "iconPosition"              => $iconPositions,
+            "iconColor"                 => "text",
             "numberOfPosts"             => "text",
             "lengthOfPostText"          => "text",
             "sortType"                  => $wpSortTypes,
             "sortOrder"                 => $wpSortOrders,
             "captionColor"              => "text",
+            "summaryColor"              => "text",
+            "subCaptionColor"           => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
             "backgroundImage"           => "text",
             "backgroundOverlay"         => "text",
             "callToActionButtonPage"    => $wpPages,
             "callToActionButtonText"    => "text",
-            "callToActionButtonClass"   => "text"
+            "callToActionButtonClass"   => "text",
+            "widgetID"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
