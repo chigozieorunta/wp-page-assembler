@@ -87,7 +87,7 @@ class widgetify_icon_group extends WP_Widget {
             "callToActionButtonPage"    => $wpPages,
             "callToActionButtonText"    => "text",
             "callToActionButtonClass"   => "text",
-            "widgetID"                  => "text",
+            "widgetId"                  => "text",
             "widgetClass"               => "text",
             "widgetPadding"             => "text",
             "widgetAnimation"           => "text"
