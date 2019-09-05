@@ -64,7 +64,11 @@ class widgetify_contact_form extends WP_Widget {
             "backgroundImage"           => "text",
             "backgroundOverlay"         => "text",
             "submitButtonText"          => "text",
-            "submitButtonClass"         => "text"
+            "submitButtonClass"         => "text",
+            "widgetId"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {

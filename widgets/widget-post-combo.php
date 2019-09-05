@@ -70,7 +70,11 @@ class widgetify_post_combo extends WP_Widget {
             "backgroundOverlay"         => "text",
             "callToActionButtonPage"    => $wpPages,
             "callToActionButtonText"    => "text",
-            "callToActionButtonClass"   => "text"
+            "callToActionButtonClass"   => "text",
+            "widgetId"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {

@@ -55,7 +55,11 @@ class widgetify_html extends WP_Widget {
         $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
-            "html"                      => "multiline"
+            "html"                      => "multiline",
+            "widgetId"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {

@@ -56,7 +56,11 @@ class widgetify_google_map extends WP_Widget {
             "title"                     => "text",
             "footnote"                  => "text",
             "location"                  => "text",
-            "height"                    => "text"
+            "height"                    => "text",
+            "widgetId"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
