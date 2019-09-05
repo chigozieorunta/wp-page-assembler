@@ -77,6 +77,8 @@ class widgetify_icon_metro extends WP_Widget {
             "sortType"                  => $wpSortTypes,
             "sortOrder"                 => $wpSortOrders,
             "captionColor"              => "text",
+            "summaryColor"              => "text",
+            "subCaptionColor"           => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
             "backgroundImage"           => "text",

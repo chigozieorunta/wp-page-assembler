@@ -59,6 +59,8 @@ class widgetify_contact_form extends WP_Widget {
             "username"                  => "text",
             "password"                  => "text",
             "captionColor"              => "text",
+            "summaryColor"              => "text",
+            "subCaptionColor"           => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
             "backgroundImage"           => "text",
