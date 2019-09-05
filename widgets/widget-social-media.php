@@ -59,7 +59,11 @@ class widgetify_social_media extends WP_Widget {
             "twitterLink"               => "text",
             "instagramLink"             => "text",
             "youtubeLink"               => "text",
-            "linkedinLink"              => "text"
+            "linkedinLink"              => "text",
+            "widgetId"                  => "text",
+            "widgetClass"               => "text",
+            "widgetPadding"             => "text",
+            "widgetAnimation"           => "text"
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
