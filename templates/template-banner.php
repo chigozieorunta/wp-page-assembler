@@ -13,7 +13,7 @@
                     </div>
                 <?php endif; ?>
                 <?php if(trim($instance['footnote'])): ?>
-                    <div class="widgetify-summary"><?= $instance['footnote']; ?></div>
+                    <div class="widgetify-text"><?= $instance['footnote']; ?></div>
                 <?php endif; ?>
                 <?php if($instance['callToActionButtonText']): ?>
                 <div class="row" style="margin-top: 1em;">
