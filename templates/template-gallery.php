@@ -1,8 +1,8 @@
 
 <!--Gallery-->
-<section class="pa-section pa-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
-        <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
+        <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
@@ -17,8 +17,8 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <div class="<?= $columnClass; ?> text-center">
-                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="pa-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
-                        <h4 class="pa-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
+                        <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="widgetify-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
+                        <h4 class="widgetify-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                         <div style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
                                 <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
@@ -32,10 +32,10 @@
                     <div class="<?= $columnClass; ?>">
                         <div class="row row-col-spacer">
                             <div class="col-sm-6">
-                                <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="pa-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
+                                <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="widgetify-gallery <?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                             </div>
                             <div class="col-sm-6">
-                                <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
+                                <h4 class="widgetify-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                                 <?php if($instance['lengthOfPostText']): ?>
                                     <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                                 <?php else: ?>
@@ -64,13 +64,13 @@
         </div>
     </div>
 </section>
-<section class="pa-slideshow">
+<section class="widgetify-slideshow">
 	<div class="fullscreen">
 		<div class="fullscreen-child">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
-						<div class="pa-slideshow-image"></div>
+						<div class="widgetify-slideshow-image"></div>
 					</div> 
 				</div>
 			</div>

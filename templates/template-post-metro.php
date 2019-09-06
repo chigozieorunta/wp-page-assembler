@@ -1,8 +1,8 @@
 
 <!--Post Metro-->
-<section class="pa-section pa-section-md pa-post-metro" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md widgetify-post-metro" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
-        <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
+        <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
@@ -23,7 +23,7 @@
                         <?php if($instance['imagePosition'] == 'top'): ?>
                             <div class="<?= $columnClass; ?> text-center">
                                 <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
-                                <h4 class="pa-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
+                                <h4 class="widgetify-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                                 <div style="margin-top: -7.5px;">
                                     <?php if($instance['lengthOfPostText']): ?>
                                         <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="hidden-xs" style="margin-top: 35px;"></div>
-                                        <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
+                                        <h4 class="widgetify-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
                                         <?php if($instance['lengthOfPostText']): ?>
                                             <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                                         <?php else: ?>
@@ -64,7 +64,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?= $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>

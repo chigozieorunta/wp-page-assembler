@@ -1,8 +1,8 @@
 
 <!--Contact Form-->
-<section class="pa-section pa-section-md pa-contact-form" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md widgetify-contact-form" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
     <?php if($instance['backgroundOverlay']): ?>
-        <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
+        <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
@@ -12,13 +12,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <input class="form-control pa-control" type="text" placeholder="Your Name" />
+                                <input class="form-control widgetify-control" type="text" placeholder="Your Name" />
                                 <i class="fa fa-user form-control-feedback"></i>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <input class="form-control pa-control" type="text" placeholder="Mobile Phone" />
+                                <input class="form-control widgetify-control" type="text" placeholder="Mobile Phone" />
                                 <i class="fa fa-phone form-control-feedback"></i>
                             </div>
                         </div>
@@ -26,13 +26,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <input class="form-control pa-control" type="text" placeholder="E-mail Address" />
+                                <input class="form-control widgetify-control" type="text" placeholder="E-mail Address" />
                                 <i class="fa fa-envelope form-control-feedback"></i>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <input class="form-control pa-control" type="text" placeholder="Subject" />
+                                <input class="form-control widgetify-control" type="text" placeholder="Subject" />
                                 <i class="fa fa-pencil form-control-feedback"></i>
                             </div>
                         </div>
@@ -40,14 +40,14 @@
                     <div class="row row-spacer">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <textarea class="form-control pa-control" rows="5" placeholder="Type in message..."></textarea>
+                                <textarea class="form-control widgetify-control" rows="5" placeholder="Type in message..."></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="form-group">
-                                <button type="submit" class="btn pa-anchor-btn <?= $instance['submitButtonClass']; ?>"><?= $instance['submitButtonText']; ?></button>
+                                <button type="submit" class="btn widgetify-anchor-btn <?= $instance['submitButtonClass']; ?>"><?= $instance['submitButtonText']; ?></button>
                             </div>
                         </div>
                     </div>

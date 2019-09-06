@@ -1,8 +1,8 @@
 
 <!--Blog Group-->
-<section class="pa-section pa-section-md pa-blog-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md widgetify-blog-group <?= $instance['widgetClass']; ?>" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>); <?php if($instance['widgetPadding']): ?>padding: <?= $instance['widgetPadding']; ?>px 0;<?php endif; ?>" id="<?= $instance['widgetId']; ?>">
     <?php if($instance['backgroundOverlay']): ?>
-        <div class="pa-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
+        <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
@@ -23,17 +23,17 @@
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-xs-3">
                                 <div style="height: 75px; background-color: <?= $instance['captionColor']; ?>; color: <?= $instance['backgroundColor']; ?>">
-                                    <div class="pa-fullscreen text-center">
-                                        <div class="pa-fullscreen-child">
-                                            <div class="pa-date"><?= getDay(get_the_date()); ?></div><span class="text-uppercase"><?= getMonth(get_the_date()); ?></span>
+                                    <div class="widgetify-fullscreen text-center">
+                                        <div class="widgetify-fullscreen-child">
+                                            <div class="widgetify-date"><?= getDay(get_the_date()); ?></div><span class="text-uppercase"><?= getMonth(get_the_date()); ?></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-9" style="padding-left: 0 !important;">
-                                <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>">
+                                <div class="widgetify-sub-caption" style="color: <?= $instance['captionColor']; ?>">
                                     <a href="<?= the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -52,14 +52,14 @@
                             </a>
                         </div>              
                         <div class="col-sm-8">
-                            <h4 class="pa-caption" style="color: <?= $instance['captionColor']; ?>">
+                            <div class="widgetify-sub-caption" style="color: <?= $instance['captionColor']; ?>">
                                 <a href="<?= the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h4>
+                            </div>
                             <div style="margin-top: -7.5px; margin-bottom: 10px;"><small><i class="fa fa-calendar" style="margin-right: 10px;"></i><?= get_the_date(); ?></small></div>
                             <?= get_the_excerpt(); ?>
                             <div class="row" style="margin-top: 15px;">
                                 <div class="col-sm-12">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>">Read More</a>
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                 <div class="row text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
-                        <a href="<?= $link; ?>" class="btn btn-primary pa-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+                        <a href="<?= $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
                     </div>
                 </div>
                 <?php endif; ?>

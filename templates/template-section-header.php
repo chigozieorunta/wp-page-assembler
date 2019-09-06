@@ -1,4 +1,4 @@
-
+<!-- Header (Caption & Summary) -->
 <?php if(trim($instance['title']) || trim($instance['footnote'])): ?>
 <div class="row row-spacer text-center">
     <div class="col-sm-12">
