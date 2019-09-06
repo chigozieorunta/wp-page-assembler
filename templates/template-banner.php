@@ -1,6 +1,6 @@
 
 <!--Banner-->
-<section class="widgetify-section widgetify-section-lg widgetify-banner" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-lg widgetify-banner <?= $instance['widgetClass']; ?>" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>); <?php if($instance['widgetPadding']): ?>padding: <?= $instance['widgetPadding']; ?>px 0;<?php endif; ?>" id="<?= $instance['widgetId']; ?>">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
