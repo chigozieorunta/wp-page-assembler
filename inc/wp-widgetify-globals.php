@@ -98,61 +98,61 @@ $wpAnimation = array(
     'slideInDown'       =>  'slideInDown',
     'slideInLeft'       =>  'slideInLeft',
     'slideInright'      =>  'slideInright',
-                slideOutUp
-                slideOutDown
-                slideOutLeft
-                slideOutRight
-                zoomIn
-                zoomInDown
-                zoomInLeft
-                zoomInRight
-                zoomInUp
-                zoomOut
-                zoomOutDown
-                zoomOutLeft
-                zoomOutRight
-                zoomOutUp
-                rotateIn
-                rotateInDownLeft
-                rotateInDownRight
-                rotateInUpLeft
-                rotateInUpRight
-                rotateOut
-                rotateOutDownLeft
-                rotateOutDownRight
-                rotateOutUpLeft
-                rotateOutUpRight
-                bounceIn
-                bounceInDown
-                bounceInLeft
-                bounceInRight
-                bounceInUp
-                bounceOut
-                bounceOutDown
-                bounceOutLeft
-                bounceOutRight
-                bounceOutUp
-                flip
-                flipInX
-                flipInY
-                flipOutX
-                flipOutY
-                rollIn
-                rollOut
-                lightSpeedIn
-                lightSpeedOut
-                hinge
-                jackInTheBox
-                bounce
-                flash
-                pulse
-                rubberBand
-                shake
-                swing
-                tada
-                wobble
-                jello
-                heartBeat
+    'slideOutUp'        =>  'slideOutUp',
+    'slideOutDown'      =>  'slideOutDown',
+    'slideOutLeft'      =>  'slideOutLeft',
+    'slideOutRight'     =>  'slideOutRight',
+    'zoomIn'            =>  'zoomIn',
+    'zoomInDown'        =>  'zoomInDown',
+    'zoomInLeft'        =>  'zoomInLeft',
+    'zoomInRight'       =>  'zoomInRight',
+    'zoomInUp'          =>  'zoomInUp',
+    'zoomOut'           =>  'zoomOut',
+    'zoomOutDown'       =>  'zoomOutDown',
+    'zoomOutLeft'       =>  'zoomOutLeft',
+    'zoomOutRight'      =>  'zoomOutRight',
+    'zoomOutUp'         =>  'zoomOutUp',
+    'rotateIn'          =>  'rotateIn',
+    'rotateInDownLeft'  =>  'rotateInDownLeft',
+    'rotateInDownRight' =>  'rotateInDownRight',
+    'rotateInUpLeft'    =>  'rotateInUpLeft',
+    'rotateInUpRight'   =>  'rotateInUpRight',
+    'rotateOut'         =>  'rotateOut',
+    'rotateOutDownLeft' =>  'rotateOutDownLeft',
+    'rotateOutDownRight'=>  'rotateOutDownRight',
+    'rotateOutUpLeft'   =>  'rotateOutUpLeft',
+    'rotateOutUpRight'  =>  'rotateOutUpRight',
+    'bounceIn'          =>  'bounceIn',
+    'bounceInDown'      =>  'bounceInDown',
+    'bounceInLeft'      =>  'bounceInLeft',
+    'bounceInRight'     =>  'bounceInRight',
+    'bounceInUp'        =>  'bounceInUp',
+    'bounceOut'         =>  'bounceOut',
+    'bounceOutDown'     =>  'bounceOutDown',
+    'bounceOutLeft'     =>  'bounceOutLeft',
+    'bounceOutRight'    =>  'bounceOutRight',
+    'bounceOutUp'       =>  'bounceOutUp',
+    'flip'              =>  'flip',
+    'flipInX'           =>  'flipInX',
+    'flipInY'           =>  'flipInY',
+    'flipOutX'          =>  'flipOutX',
+    'flipOutY'          =>  'flipOutY',     
+    'rollIn'            =>  'rollIn',
+    'rollOut'           =>  'rollOut',
+    'lightSpeedIn'      =>  'lightSpeedIn',
+    'lightSpeedOut'     =>  'lightSpeedOut',
+    'hinge'             =>  'hinge',
+    'jackInTheBox'      =>  'jackInTheBox',
+    'bounce'            =>  'bounce',
+    'flash'             =>  'flash',
+    'pulse'             =>  'pulse',
+    'rubberBand'        =>  'rubberBand',
+    'shake'             =>  'shake',
+    'swing'             =>  'swing',
+    'tada'              =>  'tada',
+    'wobble'            =>  'wobble',
+    'jello'             =>  'jello',
+    'heartBeat'         =>  'heartBeat'
 )
 
 ?>
