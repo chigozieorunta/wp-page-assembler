@@ -74,4 +74,85 @@ $columns = array(
     '6'     => 6
 );
 
+$wpAnimation = array(
+    'none'              =>  'none',
+    'fadeIn'            =>  'fadeIn',
+    'fadeInDown'        =>  'fadeInDown',
+    'fadeInDownBig'     =>  'fadeInDownBig',
+    'fadeInLeft'        =>  'fadeInLeft',
+    'fadeInLeftBig'     =>  'fadeInLeftBig',
+    'fadeInRight'       =>  'fadeInRight',
+    'fadeInRightBig'    =>  'fadeInRightBig',
+    'fadeInUp'          =>  'fadeInUp',
+    'fadeInUpBig'       =>  'fadeInUpBig',
+    'fadeOut'           =>  'fadeOut',
+    'fadeOutDown'       =>  'fadeOutDown',
+    'fadeOutDownBig'    =>  'fadeOutDownBig',
+    'fadeOutLeft'       =>  'fadeOutLeft',
+    'fadeOutLeftBig'    =>  'fadeOutLeftBig',
+    'fadeOutRight'      =>  'fadeOutRight',
+    'fadeOutRightBig'   =>  'fadeOutRightBig',
+    'fadeOutUp'         =>  'fadeOutUp',
+    'fadeOutUpBig'      =>  'fadeOutUpBig',
+    'slideInUp'         =>  'slideInUp',
+    'slideInDown'       =>  'slideInDown',
+    'slideInLeft'       =>  'slideInLeft',
+    'slideInright'      =>  'slideInright',
+                slideOutUp
+                slideOutDown
+                slideOutLeft
+                slideOutRight
+                zoomIn
+                zoomInDown
+                zoomInLeft
+                zoomInRight
+                zoomInUp
+                zoomOut
+                zoomOutDown
+                zoomOutLeft
+                zoomOutRight
+                zoomOutUp
+                rotateIn
+                rotateInDownLeft
+                rotateInDownRight
+                rotateInUpLeft
+                rotateInUpRight
+                rotateOut
+                rotateOutDownLeft
+                rotateOutDownRight
+                rotateOutUpLeft
+                rotateOutUpRight
+                bounceIn
+                bounceInDown
+                bounceInLeft
+                bounceInRight
+                bounceInUp
+                bounceOut
+                bounceOutDown
+                bounceOutLeft
+                bounceOutRight
+                bounceOutUp
+                flip
+                flipInX
+                flipInY
+                flipOutX
+                flipOutY
+                rollIn
+                rollOut
+                lightSpeedIn
+                lightSpeedOut
+                hinge
+                jackInTheBox
+                bounce
+                flash
+                pulse
+                rubberBand
+                shake
+                swing
+                tada
+                wobble
+                jello
+                heartBeat
+)
+
 ?>
