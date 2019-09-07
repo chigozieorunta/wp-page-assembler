@@ -11,17 +11,18 @@
                 <?php
                     foreach($posts as $post): setup_postdata($post);
                     $icon = get_post_meta($post->ID, 'icon', true);
+                    $delayDuration = $currentPointer * 100;
                 ?>
                 <?php if(!($currentPointer%$numberOfColumns)): ?>
                 <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-md <?php endif; ?>row-col-spacer">
                 <?php endif; ?>
                 <?php if($instance['iconPosition'] == 'top'): ?>
-                    <div class="<?= $columnClass; ?> text-center">
+                    <div class="<?= $columnClass; ?> text-center wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <?php if($icon): ?>
                             <i class="<?= $icon; ?>" style="margin-bottom: 15px; color: <?= $instance['iconColor']; ?>"></i>
                         <?php endif; ?>
                         <div class="widgetify-sub-caption" style="color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
-                        <div class="widgetify-notes" style="margin-top: -7.5px;">
+                        <div class="widgetify-text" style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
                                 <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                             <?php else: ?>
@@ -31,14 +32,14 @@
                     </div>
                 <?php endif; ?>
                 <?php if($instance['iconPosition'] == 'side'): ?>
-                    <div class="<?= $columnClass; ?>">
+                    <div class="<?= $columnClass; ?> wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <div class="row">
                             <div class="col-xs-2 text-right">
                                 <?php if($icon): ?><i class="<?= $icon; ?>" style="color: <?= $instance['iconColor']; ?>"></i><?php endif; ?>
                             </div>
                             <div class="col-xs-10">
                                 <div class="widgetify-sub-caption" style="color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
-                                <div class="widgetify-notes">
+                                <div class="widgetify-text">
                                     <?php if($instance['lengthOfPostText']): ?>
                                         <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                                     <?php else: ?>
