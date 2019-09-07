@@ -1,6 +1,6 @@
 <?php
 
-global $wpCategories, $wpPages, $iconPositions, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $textAlign, $columns;
+global $wpCategories, $wpPages, $iconPositions, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $textAlign, $columns, $wpAnimation;
 
 $wpCategories = [];
 $categories = get_categories();
