@@ -65,7 +65,7 @@ class widgetify_photo_canvas extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpCategories, $wpPages, $wpSortTypes, $wpSortOrders, $columns, $alternates, $imageShapes;
+        global $wpCategories, $wpPages, $wpSortTypes, $wpSortOrders, $columns, $alternates, $imageShapes, $widgetAnimation, $widgetBoxType;
         $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
@@ -87,7 +87,8 @@ class widgetify_photo_canvas extends WP_Widget {
             "widgetId"                  => "text",
             "widgetClass"               => "text",
             "widgetPadding"             => "text",
-            "widgetAnimation"           => "text"
+            "widgetAnimation"           => $widgetAnimation,
+            "widgetBoxType"             => $widgetBoxType
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
