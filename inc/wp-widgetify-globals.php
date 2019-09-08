@@ -1,6 +1,6 @@
 <?php
 
-global $wpCategories, $wpPages, $iconPositions, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $textAlign, $columns, $wpAnimation;
+global $wpCategories, $wpPages, $iconPositions, $imagePositions, $imageShapes, $wpSortTypes, $wpSortOrders, $textAlign, $columns, $wpAnimation, $widgetBoxType;
 
 $wpCategories = [];
 $categories = get_categories();
@@ -153,6 +153,12 @@ $wpAnimation = array(
     'wobble'            =>  'wobble',
     'jello'             =>  'jello',
     'heartBeat'         =>  'heartBeat'
-)
+);
+
+$widgetBoxType = array(
+    'compact'   =>  'compact',
+    'condensed' =>  'condensed',
+    'full'      =>  'full'
+);
 
 ?>
