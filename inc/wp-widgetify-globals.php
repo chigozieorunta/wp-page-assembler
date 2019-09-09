@@ -74,7 +74,7 @@ $columns = array(
     '6'     => 6
 );
 
-$wpAnimation = array(
+$widgetAnimation = array(
     'none'              =>  'none',
     'fadeIn'            =>  'fadeIn',
     'fadeInDown'        =>  'fadeInDown',
