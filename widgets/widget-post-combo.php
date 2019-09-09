@@ -53,7 +53,7 @@ class widgetify_post_combo extends WP_Widget {
 	function form($instance) {
 		$defaults = array('title' => '');
         $instance = wp_parse_args((array) $instance, $defaults);
-        global $wpPosts, $alternates, $wpPages, $textAlign, $imageShapes;
+        global $wpPosts, $alternates, $wpPages, $textAlign, $imageShapes, $widgetAnimation, $widgetBoxType;
         $widgetControls = array(
             "title"                     => "text",
             "footnote"                  => "text",
@@ -74,7 +74,8 @@ class widgetify_post_combo extends WP_Widget {
             "widgetId"                  => "text",
             "widgetClass"               => "text",
             "widgetPadding"             => "text",
-            "widgetAnimation"           => "text"
+            "widgetAnimation"           => $widgetAnimation,
+            "widgetBoxType"             => $widgetBoxType
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
