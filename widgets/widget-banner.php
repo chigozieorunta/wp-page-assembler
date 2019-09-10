@@ -66,8 +66,7 @@ class widgetify_banner extends WP_Widget {
             "widgetId"                  => "text",
             "widgetClass"               => "text",
             "widgetPadding"             => "text",
-            "widgetAnimation"           => $widgetAnimation,
-            "widgetBoxType"             => $widgetBoxType
+            "widgetAnimation"           => $widgetAnimation
         );
         $widgetControl = new wpWidgetifyControl($this, $instance);
         foreach($widgetControls as $key=>$value) {
