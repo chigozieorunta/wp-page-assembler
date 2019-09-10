@@ -8,12 +8,12 @@
         <div class="row text-center">
             <div class="col-sm-8 col-sm-offset-2">
                 <?php if(trim($instance['title'])): ?>
-                    <div class="widgetify-caption" style="color: <?= $instance['captionColor']; ?>">
+                    <div class="widgetify-caption wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="0ms" style="color: <?= $instance['captionColor']; ?>">
                         <?= $instance['title']; ?>
                     </div>
                 <?php endif; ?>
                 <?php if(trim($instance['footnote'])): ?>
-                    <div class="widgetify-text"><?= $instance['footnote']; ?></div>
+                    <div class="widgetify-text wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="100ms"><?= $instance['footnote']; ?></div>
                 <?php endif; ?>
                 <?php if($instance['callToActionButtonText']): ?>
                 <div class="row" style="margin-top: 1em;">
