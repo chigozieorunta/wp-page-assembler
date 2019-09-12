@@ -1,6 +1,6 @@
 
 <!--Post Group-->
-<section class="widgetify-section widgetify-section-md widgetify-post-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-section-md widgetify-post-group" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>); padding: <?= $instance['widgetPadding']; ?>px 0;" id="<?= $instance['widgetId']; ?>">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
@@ -10,16 +10,17 @@
                 <?php require('template-section-header.php'); ?>
                 <?php
                     foreach($posts as $post): setup_postdata($post);
+                    $delayDuration = $currentPointer * 100;
                     $image = getImage($post);
                 ?>
                 <?php if(!($currentPointer%$numberOfColumns)): ?>
                 <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
-                    <div class="<?= $columnClass; ?> text-center">
+                    <div class="<?= $columnClass; ?> text-center wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
-                        <h4 class="widgetify-caption" style="margin-top: 20px; color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
-                        <div style="margin-top: -7.5px;">
+                        <div class="widgetify-sub-caption" style="margin-top: 20px; color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
+                        <div class="widgetify-text" style="margin-top: -7.5px;">
                             <?php if($instance['lengthOfPostText']): ?>
                                 <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
                             <?php else: ?>
@@ -29,19 +30,21 @@
                     </div>
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'side'): ?>
-                    <div class="<?= $columnClass; ?>">
+                    <div class="<?= $columnClass; ?> wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <div class="row row-col-spacer">
                             <div class="col-sm-6">
                                 <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                             </div>
                             <div class="col-sm-6">
                                 <div class="hidden-xs" style="margin-top: 35px;"></div>
-                                <h4 class="widgetify-caption" style="color: <?= $instance['captionColor']; ?>"><?php the_title(); ?></h4>
-                                <?php if($instance['lengthOfPostText']): ?>
-                                    <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
-                                <?php else: ?>
-                                    <?= get_the_excerpt(); ?>
-                                <?php endif; ?>
+                                <div class="widgetify-sub-caption" style="color: <?= $instance['subCaptionColor']; ?>"><?php the_title(); ?></div>
+                                <div class="widgetify-text">
+                                    <?php if($instance['lengthOfPostText']): ?>
+                                        <?= getShortenedText(get_the_excerpt(), $instance['lengthOfPostText']) ?>
+                                    <?php else: ?>
+                                        <?= get_the_excerpt(); ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
