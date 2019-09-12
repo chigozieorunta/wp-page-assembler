@@ -24,22 +24,22 @@
             	<div class="feature-section four-col">
             		<div class="col">
             			<div class="freedoms-image"></div>
-            			<h3>wp-pa-iconset</h3>
+            			<h3>widgetify-iconset</h3>
             			<p>The iconset helps you create a group of icons categorized under one group.</p>
             		</div>
             		<div class="col">
             			<div class="freedoms-image"></div>
-            			<h3>wp-pa-blogset</h3>
+            			<h3>widgetify-blogset</h3>
             			<p>To study how the program works and change it to make it do what you wish.</p>
             		</div>
             		<div class="col">
             			<div class="freedoms-image"></div>
-            			<h3>wp-pa-gmaps</h3>
+            			<h3>widgetify-gmaps</h3>
             			<p>To redistribute.</p>
             		</div>
             		<div class="col">
             			<div class="freedoms-image"></div>
-            			<h3>wp-pa-contact-form</h3>
+            			<h3>widgetify-contact-form</h3>
             			<p>To distribute copies of your modified versions to others.</p>
             		</div>
             	</div>
