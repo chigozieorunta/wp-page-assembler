@@ -79,6 +79,8 @@ class widgetify_post_group extends WP_Widget {
             "sortType"                  => $wpSortTypes,
             "sortOrder"                 => $wpSortOrders,
             "captionColor"              => "text",
+            "summaryColor"              => "text",
+            "subCaptionColor"           => "text",
             "textColor"                 => "text",
             "backgroundColor"           => "text",
             "backgroundImage"           => "text",
