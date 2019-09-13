@@ -23,14 +23,14 @@
                 <div class="col-sm-5 col-sm-offset-6 text-right">
                 <?php endif; ?>
                     <?php if(trim($instance['title'])): ?>
-                        <div class="widgetify-hero" style="color: <?= $instance['captionColor']; ?>"><?= $instance['title']; ?></div>
+                        <div class="widgetify-hero wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="0" style="color: <?= $instance['captionColor']; ?>"><?= $instance['title']; ?></div>
                     <?php endif; ?>
                     <?php if(trim($instance['footnote'])): ?>
-                        <div class="widgetify-summary"><?= $instance['footnote']; ?></div><br/>
+                        <div class="widgetify-text wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="300ms"><?= $instance['footnote']; ?></div><br/>
                     <?php endif; ?>
                     
                     <?php if($instance['callToActionButtonText']): ?>
-                    <div class="row">
+                    <div class="row wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="600ms">
                         <div class="col-sm-12">
                             <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
                             <a href="<?= $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
