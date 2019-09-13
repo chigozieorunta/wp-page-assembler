@@ -1,6 +1,6 @@
 
 <!--Slider-->
-<section class="widgetify-section widgetify-fullscreen widgetify-slider" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);">
+<section class="widgetify-section widgetify-fullscreen widgetify-slider <?= $instance['widgetClass']; ?>" style="color: <?= $instance['textColor']; ?>; background-color: <?= $instance['backgroundColor']; ?>; background-image: url(<?= $instance['backgroundImage']; ?>);" id="<?= $instance['widgetId']; ?>">
     <?php if($instance['backgroundOverlay']): ?>
         <div class="widgetify-overlay" style="background: <?= $instance['backgroundOverlay']; ?>"></div>
     <?php endif; ?>
