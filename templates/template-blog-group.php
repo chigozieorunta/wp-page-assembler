@@ -10,13 +10,14 @@
                 <?php require('template-section-header.php'); ?>
                 <?php
                     foreach($posts as $post): setup_postdata($post);
+                    $delayDuration = $currentPointer * 100;
                     $image = getImage($post);
                 ?>
                 <?php if($instance['imagePosition'] == 'top'): ?>
                     <?php if(!($currentPointer%$numberOfColumns)): ?>
                     <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                     <?php endif; ?>
-                    <div class="<?= $columnClass; ?>">
+                    <div class="<?= $columnClass; ?> wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
                         </a>
@@ -45,7 +46,7 @@
                 <?php endif; ?>
                 <?php if($instance['imagePosition'] == 'side'): ?>
                     <?php $count++; ?>
-                    <div class="row <?php if($instance['callToActionButtonText'] || ($count < $totalPosts)): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
+                    <div class="row <?php if($instance['callToActionButtonText'] || ($count < $totalPosts)): ?>row-spacer-lg <?php endif; ?>row-col-spacer wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="<?= $delayDuration; ?>ms">
                         <div class="col-sm-4">
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?= $image; ?>" height="<?= $instance['height']; ?>" class="<?php if($instance['imageUniform'] == 'yes'): ?>unim-<?= $instance['imageShape']; ?><?php else: ?>img-responsive center-block<?php endif; ?>"/>
