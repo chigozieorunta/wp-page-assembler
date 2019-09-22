@@ -13,7 +13,7 @@
                     $delayDuration = $currentPointer * 100;
                     $image = getImage($post);
                 ?>
-                <?php if($instance['imagePosition'] == 'top'): ?> 
+                <?php if($instance['imagePosition'] == 'top'): ?>
                     <?php if(!($currentPointer%$numberOfColumns)): ?>
                     <div class="row <?php if(($currentRow != $numberOfRows) || $instance['callToActionButtonText']): ?>row-spacer-lg <?php endif; ?>row-col-spacer">
                     <?php endif; ?>
