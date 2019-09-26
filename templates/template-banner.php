@@ -16,7 +16,7 @@
                     <div class="widgetify-text wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="100ms"><?= $instance['footnote']; ?></div>
                 <?php endif; ?>
                 <?php if($instance['callToActionButtonText']): ?>
-                <div class="row" style="margin-top: 1em;">
+                <div class="row wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="200ms" style="margin-top: 1em;">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
                         <a href="<?php echo $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
