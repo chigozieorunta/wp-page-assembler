@@ -56,7 +56,7 @@
                             <div class="widgetify-sub-caption" style="color: <?= $instance['captionColor']; ?>">
                                 <a href="<?= the_permalink(); ?>"><?php the_title(); ?></a>
                             </div>
-                            <div style="margin-top: -7.5px; margin-bottom: 10px;"><small><i class="fa fa-calendar" style="margin-right: 10px;"></i><?= get_the_date(); ?></small></div>
+                            <div class="widgetifty-text" style="margin-top: -7.5px; margin-bottom: 10px;"><small><i class="fa fa-calendar" style="margin-right: 10px;"></i><?= get_the_date(); ?></small></div>
                             <?= get_the_excerpt(); ?>
                             <div class="row" style="margin-top: 15px;">
                                 <div class="col-sm-12">
