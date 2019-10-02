@@ -57,7 +57,7 @@
                 <?php endforeach; wp_reset_postdata(); ?>
 
                 <?php if($instance['callToActionButtonText']): ?>
-                <div class="row text-center">
+                <div class="row wow <?= $instance['widgetAnimation']; ?> text-center">
                     <div class="col-sm-12">
                         <?php $link = get_page_link($instance['callToActionButtonPage']); ?>
                         <a href="<?= $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
