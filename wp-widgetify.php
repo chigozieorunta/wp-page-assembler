@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Widgetify
  * Plugin URI:  https://github.com/chigozieorunta/wp-widgetify
- * Description: The Widgetify WordPress Plugin is a collection of custom widgets designed to help web designers build sections of their web pages easily by simply dragging and droping.
+ * Description: The Widgetify WordPress Plugin is a collection of WordPress widgets designed to help web designers build sections of their web page easily via widgets.
  * Version:     1.0.0
  * Author:      Chigozie Orunta
  * Author URI:  https://github.com/chigozieorunta
