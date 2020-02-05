@@ -104,6 +104,10 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
     This is used for styling buttons found in your widgets.
   </li><br/>
   <li>
+    <strong>widgetify-control</strong><br/>
+    This is used for styling your widgetify form controls.
+  </li><br/>
+  <li>
     <strong>widgetify-compact</strong><br/>
     This is used to specify the level of padding within your container-fluid sections.
   </li><br/>
@@ -111,6 +115,39 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
     <strong>widgetify-banner</strong><br/>
     This is used for styling your widgetify banner section.
   </li><br/>
+  <li>
+    <strong>widgetify-blog-group</strong><br/>
+    This is used for styling your widgetify blog group section.
+  </li><br/>
+  <li>
+    <strong>widgetify-contact-form</strong><br/>
+    This is used for styling your widgetify contact form section.
+  </li><br/>
+  <li>
+    <strong>widgetify-content-box</strong><br/>
+    This is used for styling your widgetify content box section.
+  </li><br/>
+  <li>
+    <strong>widgetify-gallery</strong><br/>
+    This is used for styling your widgetify gallery section.
+  </li><br/>
+  <li>
+    <strong>widgetify-google-map</strong><br/>
+    This is used for styling your widgetify google map section.
+  </li><br/>
+  <li>
+    <strong>widgetify-html-container</strong><br/>
+    This is used for styling your widgetify html container section.
+  </li><br/>
+  <li>
+    <strong>widgetify-icon-group</strong><br/>
+    This is used for styling your widgetify icon group section.
+  </li><br/>
+  <li>
+    <strong>widgetify-icon-metro</strong><br/>
+    This is used for styling your widgetify icon metro section.
+  </li><br/>
+</ul>
 
 ### Hooks/Extensions
 You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to Documentation.
