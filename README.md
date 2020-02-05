@@ -47,7 +47,7 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
     The icon metro helps you add a set of icons belonging to the same category using a metro effect.
   </li><br/>
   <li>
-    <strong>widgetify-photo-canvas</strong><br/>
+    <strong>Widgetify Photo Canvas</strong><br/>
     The photo canvas helps you add a group of pictures with equal heights all joined together like boxes.
   </li><br/>
   <li>
@@ -78,11 +78,7 @@ You can extend the functionality of your widgetify widgets by adding the followi
   <li>
     <strong>widgetify_gallery_caption</strong><br/>
     You can add a custom display to your gallery caption by doing so:<br/>
-    <code>add_action('widgetify_gallery_caption', 'your_custom_function');</code>
-  </li><br/>
-  <li>
-    <strong>Widgetify Blog Group</strong><br/>
-    The blog group helps you create a blog group in two variants (portrait & landscape).
+    <code>  add_action('widgetify_gallery_caption', 'your_custom_function');  </code>
   </li><br/>
 </ul>
 
