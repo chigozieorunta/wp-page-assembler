@@ -19,35 +19,33 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
     The blog group helps you create a blog group in two variants (portrait & landscape).
   </li><br/>
   <li>
-    <strong>Widgetify Contact Form</strong>
-    <p>The contact form helps you create a basic contact form that submits to an email.</p>
-  </li>
+    <strong>Widgetify Contact Form</strong><br/>
+    The contact form helps you create a basic contact form that submits to an email.
+  </li><br/>
   <li>
-    <strong>Widgetify Content Box</strong>
-    <p>The content box helps you create a content area with title, text and associated image.</p>
-  </li>
+    <strong>Widgetify Content Box</strong><br/>
+    The content box helps you create a content area with title, text and associated image.
+  </li><br/>
   <li>
-    <strong>Widgetify Gallery</strong>
-    <p>The gallery helps you create a collection of pictures with a slideshow to help the user browse through.</p>
-  </li>
-            		<div class="col">
-            			<h3>widgetify-google-map</h3>
-            			<p>The google map helps you add the classic google map into your website easily by specifying an address.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-html-container</h3>
-            			<p>To HTML container helps you add raw HTML code into your page by adding its widget to your page.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-icon-group</h3>
-            			<p>The icon group helps you add a set of (font-awesome, themify) icon columns into your page.</p>
-            		</div>
-            	</div>
-				<div class="feature-section four-col">
-            		<div class="col">
-            			<h3>widgetify-icon-metro</h3>
-            			<p>The icon metro helps you add a set of icons belonging to the same category using a metro effect.</p>
-            		</div>
+    <strong>Widgetify Gallery</strong><br/>
+    The gallery helps you create a collection of pictures with a slideshow to help the user browse through.
+  </li><br/>
+  <li>
+    <strong>Widgetify Google Map</strong><br/>
+    The google map helps you add the classic google map into your website easily by specifying an address.
+  </li><br/>
+  <li>
+    <strong>widgetify-html-container</strong><br/>
+    To HTML container helps you add raw HTML code into your page by adding its widget to your page.
+  </div><br/>
+  <li>
+    <strong>widgetify-icon-group</strong><br/>
+    The icon group helps you add a set of (font-awesome, themify) icon columns into your page.
+  </div><br/>
+  <li>
+    <strong>widgetify-icon-metro</strong><br/>
+    The icon metro helps you add a set of icons belonging to the same category using a metro effect.
+  </li><br/>
             		<div class="col">
             			<h3>widgetify-photo-canvas</h3>
             			<p>The photo canvas helps you add a group of pictures with equal heights all joined together like boxes.</p>
