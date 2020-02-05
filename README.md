@@ -86,6 +86,7 @@ function your_custom_function($title) {
   //your code...
 }
 ```
+
 ### Tooling
 Widgetify utilizes Bootstrap 3.3.7 and Row Spacer for UI frameworking.
 <ul>
