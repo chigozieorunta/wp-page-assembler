@@ -8,7 +8,7 @@ npm install wp-widgetify
 ``` 
 
 ### Usage
-Once installed, log into your WordPress admin dashboard and head over to the **Widgets** section of your Widgetify theme. You should see all the available widgets for your usage. The following are a list of the standard widgetify widgets available for your use and their functions:
+Once installed, log into your WordPress admin dashboard and head over to the **Widgets** section of your Widgetify theme. You should see all the available widgets for your usage. The following are a list of the standard widgetify widgets available for your use and their functions (to see more on specific use case, refer to documentation):
 <ul>
   <li>
     <strong>Widgetify Banner</strong><br/>
@@ -73,7 +73,7 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
 </ul>
 
 ### CSS Classes
-By default, Widgetify uses a number of CSS classes for styling. You can also add your own custom classes by way of hooks. Listed below are the standard Widgetify classes:
+By default, Widgetify uses a number of CSS classes for styling. You can also add your own custom classes by way of hooks. Listed below are the standard Widgetify classes (to see more on specific use case, refer to documentation):
 <ul>
   <li>
     <strong>widgetify-hero</strong><br/>
@@ -178,7 +178,7 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
 </ul>
 
 ### Hooks/Extensions
-You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to Documentation.
+You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to documentation.
 <ul>
   <li>
     <strong>widgetify_banner_caption</strong><br/>
