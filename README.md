@@ -77,14 +77,13 @@ You can extend the functionality of your widgetify widgets by adding the followi
 <ul>
   <li>
     <strong>widgetify_banner_caption</strong><br/>
-    You can add a custom display to your banner caption by doing so:<br/>
+    You can add a custom display to your banner caption by doing so:
   </li>
 </ul>
+
 ```
 add_action('widgetify_banner_caption', 'your_custom_function');
-function your_custom_function($title) {
-  //your code...
-}
+
 ```
 
 ### Tooling
