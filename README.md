@@ -73,15 +73,19 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
 </ul>
 
 ### Hooks/Extensions
-You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins.
+You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to Documentation.
 <ul>
   <li>
-    <strong>widgetify_gallery_caption</strong><br/>
-    You can add a custom display to your gallery caption by doing so:<br/>
-    <code>  add_action('widgetify_gallery_caption', 'your_custom_function');  </code>
-  </li><br/>
+    <strong>widgetify_banner_caption</strong><br/>
+    You can add a custom display to your banner caption by doing so:<br/>
+  </li>
 </ul>
-
+```
+add_action('widgetify_banner_caption', 'your_custom_function');
+function your_custom_function($title) {
+  //your code...
+}
+```
 ### Tooling
 Widgetify utilizes Bootstrap 3.3.7 and Row Spacer for UI frameworking.
 <ul>
