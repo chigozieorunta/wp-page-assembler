@@ -36,7 +36,7 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
   </li><br/>
   <li>
     <strong>Widgetify HTML Container</strong><br/>
-    To HTML container helps you add raw HTML code into your page by adding its widget to your page.
+    The HTML container helps you add raw HTML code into your page by adding its widget to your page.
   </li><br/>
   <li>
     <strong>Widgetify Icon Group</strong><br/>
@@ -46,32 +46,30 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
     <strong>Widgetify Icon Metro</strong><br/>
     The icon metro helps you add a set of icons belonging to the same category using a metro effect.
   </li><br/>
-            		<div class="col">
-            			<h3>widgetify-photo-canvas</h3>
-            			<p>The photo canvas helps you add a group of pictures with equal heights all joined together like boxes.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-post-combo</h3>
-            			<p>The post combo helps you add a post combo in a box-like format that contains equal height on both sides.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-post-group</h3>
-            			<p>The post group helps you add a group of posts belonging to a category to your web page.</p>
-            		</div>
-            	</div>
-				<div class="feature-section four-col">
-            		<div class="col">
-            			<h3>widgetify-post-metro</h3>
-            			<p>The post metro helps you add a metro effect to a post group. Just simply add widget and specify category and you're good.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-slider</h3>
-            			<p>The slider helps you add a full screen slider to the top part of your page. It is very handy and efficient for a slider.</p>
-            		</div>
-            		<div class="col">
-            			<h3>widgetify-social-media</h3>
-            			<p>The social media widget helps you add a social media sticker (facebook, twitter, instagram...) to your web page.</p>
-            		</div>
+  <li>
+    <strong>widgetify-photo-canvas</strong><br/>
+    The photo canvas helps you add a group of pictures with equal heights all joined together like boxes.
+  </li><br/>
+  <li>
+    <strong>Widgetify Post Combo</strong><br/>
+    The post combo helps you add a post combo in a box-like format that contains equal height on both sides.
+  </li><br/>
+  <li>
+    <strong>Widgetify Post Group</strong><br/>
+    The post group helps you add a group of posts belonging to a category to your web page.
+  </li><br/>
+  <li>
+    <strong>Widgetify Post Metro</strong><br/>
+    The post metro helps you add a metro effect to a post group. Just simply add widget and specify category and you're good.
+  </li><br/>
+  <li>
+    <strong>Widgetify Slider</strong><br/>
+    The slider helps you add a full screen slider to the top part of your page. It is very handy and efficient for a slider.
+  </li><br/>
+  <li>
+     <strong>Widgetify Social Media</strong><br/>
+     The social media widget helps you add a social media sticker (facebook, twitter, instagram...) to your web page.
+  </li><br/>
 </ul>
 
 ### Hooks/Extensions
