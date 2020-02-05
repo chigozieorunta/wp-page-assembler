@@ -16,6 +16,28 @@ html, body {
     width: 100%; height: 100%;
 }
 
+/* LETTERING */
+
+.widgetify-hero {
+	font: 36px Arial;
+}
+
+.widgetify-caption {
+	font: 28px Arial;
+}
+
+.widgetify-summary {
+	font: 14px Arial;
+}
+
+.widgetify-sub-caption {
+	font: 20px Arial;
+}
+
+.widgetify-text {
+	font: 14px Arial;
+}
+
 /* SECTIONS */
 
 .widgetify-section {
@@ -210,39 +232,6 @@ html, body {
 
 .widgetify-no-padding {
 	padding: 0 !important;
-}
-
-/* LETTERING */
-
-.widgetify-hero {
-	font-size: 64px;
-	margin-bottom: 30px;
-	line-height: 1.25;
-	font-family: 'Playfair Display', Arial;
-	font-weight: 700;
-	letter-spacing: -0.5px;
-}
-
-.widgetify-caption {
-	font-size: 32px;
-	margin-bottom: 20px;
-	line-height: 1.25;
-	letter-spacing: -0.5px;
-}
-
-.widgetify-sub-caption {
-	font-size: 24px;
-	margin-bottom: 15px;
-	line-height: 1.25;
-	letter-spacing: -0.5px;
-}
-
-.widgetify-summary {
-
-}
-
-.widgetify-text {
-
 }
 
 /* SOCIAL MEDIA */
