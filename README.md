@@ -112,6 +112,10 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
     This is used to specify the level of padding within your container-fluid sections.
   </li><br/>
   <li>
+    <strong>widgetify-section</strong><br/>
+    This is used for styling widgetify sections.
+  </li><br/>
+  <li>
     <strong>widgetify-banner</strong><br/>
     This is used for styling your widgetify banner section.
   </li><br/>
@@ -146,6 +150,30 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
   <li>
     <strong>widgetify-icon-metro</strong><br/>
     This is used for styling your widgetify icon metro section.
+  </li><br/>
+  <li>
+    <strong>widgetify-photo-canvas</strong><br/>
+    This is used for styling your widgetify photo canvas section.
+  </li><br/>
+  <li>
+    <strong>widgetify-post-combo</strong><br/>
+    This is used for styling your widgetify post combo section.
+  </li><br/>
+  <li>
+    <strong>widgetify-post-group</strong><br/>
+    This is used for styling your widgetify post group section.
+  </li><br/>
+  <li>
+    <strong>widgetify-post-metro</strong><br/>
+    This is used for styling your widgetify post metro section.
+  </li><br/>
+  <li>
+    <strong>widgetify-slider</strong><br/>
+    This is used for styling your widgetify slider section.
+  </li><br/>
+  <li>
+    <strong>widgetify-social-media</strong><br/>
+    This is used for styling your widgetify social media section.
   </li><br/>
 </ul>
 
