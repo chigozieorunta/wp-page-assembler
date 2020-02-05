@@ -108,12 +108,24 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
     This is used for styling your widgetify form controls.
   </li><br/>
   <li>
-    <strong>widgetify-compact</strong><br/>
+    <strong>widgetify-block-padding</strong><br/>
     This is used to specify the level of padding within your container-fluid sections.
   </li><br/>
   <li>
     <strong>widgetify-section</strong><br/>
     This is used for styling widgetify sections.
+  </li><br/>
+  <li>
+    <strong>widgetify-section-*</strong><br/>
+    This is used for styling section paddings.
+  </li><br/>
+  <li>
+    <strong>widgetify-margin-*</strong><br/>
+    This is used for styling margin distances.
+  </li><br/>
+  <li>
+    <strong>widgetify-overlay</strong><br/>
+    This is used for styling the overlays over backgrounds.
   </li><br/>
   <li>
     <strong>widgetify-banner</strong><br/>
