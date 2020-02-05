@@ -26,6 +26,11 @@
         "orunta"
     ],
     "files": [
-        "wp-widgetify.php"
+        "wp-widgetify.php",
+        "wp-widgetify-html.php",
+        "widgets",
+        "js",
+        "css",
+        "inc"
     ]
 }
