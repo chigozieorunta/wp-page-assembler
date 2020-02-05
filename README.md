@@ -9,10 +9,10 @@ npm install wp-widgetify
 
 ### Usage
 Once installed, log into your WordPress admin dashboard and head over to the **Widgets** section of your Widgetify theme. You should see all the available widgets for your usage.
-```
-### Widgetify Banner
-The banner helps you create a banner with a background picture that cuts across the full width of the screen.
 
+#### Widgetify Banner
+The banner helps you create a banner with a background picture that cuts across the full width of the screen.
+```
 ### Widgetify Banner
 The banner helps you create a banner with a background picture that cuts across the full width of the screen.
 
