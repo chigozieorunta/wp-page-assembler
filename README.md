@@ -72,6 +72,46 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
   </li><br/>
 </ul>
 
+### CSS Classes
+By default, Widgetify uses a number of CSS classes for styling. You can also add your own custom classes by way of hooks. Listed below are the standard Widgetify classes:
+<ul>
+  <li>
+    <strong>widgetify-hero</strong><br/>
+    This is used for styling gigantic texts shown in your slider and metro group (blog & icon) widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-caption</strong><br/>
+    This is used for styling captions on your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-summary</strong><br/>
+    This is used for styling summaries that come immediately after the caption on your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-sub-caption</strong><br/>
+    This is used for styling sub-captions on post titles in your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-text</strong><br/>
+    This is used for styling normal texts on your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-anchor</strong><br/>
+    This is used for styling anchors found in your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-button</strong><br/>
+    This is used for styling buttons found in your widgets.
+  </li><br/>
+  <li>
+    <strong>widgetify-compact</strong><br/>
+    This is used to specify the level of padding within your container-fluid sections.
+  </li><br/>
+  <li>
+    <strong>widgetify-banner</strong><br/>
+    This is used for styling your widgetify banner section.
+  </li><br/>
+
 ### Hooks/Extensions
 You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to Documentation.
 <ul>
