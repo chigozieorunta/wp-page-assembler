@@ -35,15 +35,15 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
     The google map helps you add the classic google map into your website easily by specifying an address.
   </li><br/>
   <li>
-    <strong>widgetify-html-container</strong><br/>
+    <strong>Widgetify HTML Container</strong><br/>
     To HTML container helps you add raw HTML code into your page by adding its widget to your page.
-  </div><br/>
+  </li><br/>
   <li>
-    <strong>widgetify-icon-group</strong><br/>
+    <strong>Widgetify Icon Group</strong><br/>
     The icon group helps you add a set of (font-awesome, themify) icon columns into your page.
-  </div><br/>
+  </li><br/>
   <li>
-    <strong>widgetify-icon-metro</strong><br/>
+    <strong>Widgetify Icon Metro</strong><br/>
     The icon metro helps you add a set of icons belonging to the same category using a metro effect.
   </li><br/>
             		<div class="col">
