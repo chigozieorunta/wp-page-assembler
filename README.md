@@ -18,6 +18,62 @@ Once installed, log into your WordPress admin dashboard and head over to the **W
     <strong>Widgetify Blog Group</strong><br/>
     The blog group helps you create a blog group in two variants (portrait & landscape).
   </li><br/>
+  <li>
+    <strong>Widgetify Contact Form</strong>
+    <p>The contact form helps you create a basic contact form that submits to an email.</p>
+  </li>
+  <li>
+    <strong>Widgetify Content Box</strong>
+    <p>The content box helps you create a content area with title, text and associated image.</p>
+  </li>
+  <li>
+    <strong>Widgetify Gallery</strong>
+    <p>The gallery helps you create a collection of pictures with a slideshow to help the user browse through.</p>
+  </li>
+            		<div class="col">
+            			<h3>widgetify-google-map</h3>
+            			<p>The google map helps you add the classic google map into your website easily by specifying an address.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-html-container</h3>
+            			<p>To HTML container helps you add raw HTML code into your page by adding its widget to your page.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-icon-group</h3>
+            			<p>The icon group helps you add a set of (font-awesome, themify) icon columns into your page.</p>
+            		</div>
+            	</div>
+				<div class="feature-section four-col">
+            		<div class="col">
+            			<h3>widgetify-icon-metro</h3>
+            			<p>The icon metro helps you add a set of icons belonging to the same category using a metro effect.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-photo-canvas</h3>
+            			<p>The photo canvas helps you add a group of pictures with equal heights all joined together like boxes.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-post-combo</h3>
+            			<p>The post combo helps you add a post combo in a box-like format that contains equal height on both sides.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-post-group</h3>
+            			<p>The post group helps you add a group of posts belonging to a category to your web page.</p>
+            		</div>
+            	</div>
+				<div class="feature-section four-col">
+            		<div class="col">
+            			<h3>widgetify-post-metro</h3>
+            			<p>The post metro helps you add a metro effect to a post group. Just simply add widget and specify category and you're good.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-slider</h3>
+            			<p>The slider helps you add a full screen slider to the top part of your page. It is very handy and efficient for a slider.</p>
+            		</div>
+            		<div class="col">
+            			<h3>widgetify-social-media</h3>
+            			<p>The social media widget helps you add a social media sticker (facebook, twitter, instagram...) to your web page.</p>
+            		</div>
 </ul>
 
 ### Hooks/Extensions
