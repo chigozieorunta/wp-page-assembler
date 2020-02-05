@@ -190,7 +190,7 @@ By default, Widgetify uses a number of CSS classes for styling. You can also add
 </ul>
 
 ### Hooks/Extensions
-You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to documentation.
+You can extend the functionality of your widgetify widgets by adding the following hooks to your **functions.php** file or plugins. To see more on specific use case, refer to documentation. For e.g.
 <ul>
   <li>
     <strong>widgetify_banner_caption</strong><br/>
