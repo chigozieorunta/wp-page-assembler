@@ -1,5 +1,35 @@
 <?php
 
+/* WIDGETIFY BANNER */
+
+function widgetify_banner_caption() {
+	return '';
+}
+
+function widgetify_before_banner_caption() {
+	return '';
+}
+
+function widgetify_after_banner_caption() {
+	return '';
+}
+
+function widgetify_banner_summary() {
+	return '';
+}
+
+function widgetify_before_banner_summary() {
+	return '';
+}
+
+function widgetify_after_banner_summary() {
+	return '';
+}
+
+function widgetify_banner_button() {
+	return '';
+}
+
 function getDay($date) {
 	$date = new DateTime($date);
 	$theme_day = $date->format('j');
