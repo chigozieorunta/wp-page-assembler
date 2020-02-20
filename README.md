@@ -200,7 +200,7 @@ You can extend the functionality of your widgetify widgets by adding the followi
 
 ```
 add_action('widgetify_banner_caption', 'your_custom_function');
-function your_custom_function($title) {
+function your_custom_function($caption) {
   //your code...
 }
 ```
