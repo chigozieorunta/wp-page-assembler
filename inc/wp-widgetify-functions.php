@@ -2,8 +2,12 @@
 
 /* WIDGETIFY BANNER */
 
-function widgetify_banner_caption() {
-	return '';
+function widgetify_banner_caption($caption) {
+?>
+	<div class="widgetify-caption wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="0ms" style="color: <?= $instance['captionColor']; ?>">
+		<?= $instance['title']; ?>
+	</div>
+<?
 }
 
 function widgetify_before_banner_caption() {
