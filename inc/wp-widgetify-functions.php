@@ -45,11 +45,11 @@ function widgetify_after_banner_summary() {
 }
 
 function widgetify_before_banner_button() {
-
+	return '';
 }
 
 function widgetify_after_banner_button() {
-	
+	return '';	
 }
 
 function getDay($date) {
