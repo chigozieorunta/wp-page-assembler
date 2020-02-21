@@ -14,9 +14,12 @@
                     </div>
                 <?php endif; ?>
                 <?= widgetify_after_banner_caption(); ?>
+                <?= widgetify_before_banner_summary(); ?>
                 <?php if(trim($instance['footnote'])): ?>
                     <div class="widgetify-text wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="100ms"><?= $instance['footnote']; ?></div>
                 <?php endif; ?>
+                <?= widgetify_after_banner_summary(); ?>
+                <?= widgetify_before_banner_button(); ?>
                 <?php if($instance['callToActionButtonText']): ?>
                 <div class="row wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="200ms" style="margin-top: 1em;">
                     <div class="col-sm-12">
@@ -25,6 +28,7 @@
                     </div>
                 </div>
                 <?php endif; ?>
+                <?= widgetify_after_banner_button(); ?>
             </div>
         </div>
     </div>
