@@ -2,10 +2,28 @@
 
 /* WIDGETIFY BANNER */
 
-function widgetify_banner_caption($caption) {
+function widgetify_banner_caption($instance) {
 ?>
 	<div class="widgetify-caption wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="0ms" style="color: <?= $instance['captionColor']; ?>">
 		<?= $instance['title']; ?>
+	</div>
+<?
+}
+
+function widgetify_banner_summary($instance) {
+?>
+	<?php if(trim($instance['footnote'])): ?>
+		<div class="widgetify-text wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="100ms"><?= $instance['footnote']; ?></div>
+<?
+}
+
+function widgetify_banner_button($instance) {
+?>
+	<div class="row wow <?= $instance['widgetAnimation']; ?>" data-wow-delay="200ms" style="margin-top: 1em;">
+		<div class="col-sm-12">
+			<?php $link = get_page_link($instance['callToActionButtonPage']); ?>
+			<a href="<?php echo $link; ?>" class="btn btn-primary widgetify-anchor-btn <?= $instance['callToActionButtonClass']; ?>"><?= $instance['callToActionButtonText']; ?></a>
+		</div>
 	</div>
 <?
 }
@@ -18,10 +36,6 @@ function widgetify_after_banner_caption() {
 	return '';
 }
 
-function widgetify_banner_summary() {
-	return '';
-}
-
 function widgetify_before_banner_summary() {
 	return '';
 }
@@ -30,8 +44,12 @@ function widgetify_after_banner_summary() {
 	return '';
 }
 
-function widgetify_banner_button() {
-	return '';
+function widgetify_before_banner_button() {
+
+}
+
+function widgetify_after_banner_button() {
+	
 }
 
 function getDay($date) {
