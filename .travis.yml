@@ -7,6 +7,9 @@ notifications:
   on_success: never
   on_failure: change
 
+services:
+  - mysql
+
 php:
   - nightly # PHP 7.0
   - 5.6
@@ -21,9 +24,7 @@ matrix:
     - php: nightly
 
 before_script:
-  # Install composer packages before trying to activate themes or plugins
-  # - composer install
-
+  - composer install
   - git clone https://github.com/Koodimonni/wordpress-test-template wp-tests
   - bash wp-tests/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
 
