@@ -25,7 +25,7 @@ before_script:
   # - composer install
 
   - git clone https://github.com/Koodimonni/wordpress-test-template wp-tests
-  - bash wp-tests/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
+  - bash https://github.com/Koodimonni/wordpress-test-template/blob/master/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
 
 script:
   - phpcs --standard=WordPress ./**/*.php
