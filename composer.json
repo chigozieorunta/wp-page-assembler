@@ -1,0 +1,14 @@
+{
+    "name": "chigozieorunta/widgetify",
+    "description": "The Widgetify WordPress Plugin is a collection of WordPress widgets designed to help web designers build sections of their web page easily via widgets.",
+    "type": "wordpress-plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "chigozieorunta",
+            "email": "chigozieorunta@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
